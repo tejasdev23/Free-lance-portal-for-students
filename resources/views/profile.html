@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>HOME</title>
+     <link rel="stylesheet" href="node_modules/angular-material/angular-material.css" >
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+   <!--form css -->
+   
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/mystyles.css" rel="stylesheet">
+
+
+</head>
+
+<body ng-app="MyApp">
+ <md-nav-bar md-selected-nav-item="currentNavItem">
+  <md-nav-item md-nav-click="" name="page1">LOGO</md-nav-item>
+  <md-nav-item md-nav-sref="app.page2" name="page2">Page Two</md-nav-item>
+  <md-nav-item md-nav-href="#page3" name="page3">Page Three</md-nav-item>
+</md-nav-bar>
