@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php session_start(); ?>
 <head>
-
+     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
     <title>Give a Challenge</title>
 
     <!-- Custom Fonts -->
-    <link href="fonts\font-awesome\css\font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -25,6 +25,19 @@
 
     
 </head>
+
+    @if(Session::has('success'))
+    
+     
+    <div class="alert alert-success">{{ Session::get('success') }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+    
+    @endif
+    @if(Session::has('failure'))
+    
+      <div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      {{ Session::get('failure') }}</div>
+    
+    @endif
 
 <body>
 
@@ -39,7 +52,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Home</a>
+                <a class="navbar-brand" href="index">Home</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
 
@@ -49,13 +62,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="startprojects.html">Start Projects</a>
+                        <a href="startprojects">Start Projects</a>
                     </li>
                     <li>
-                        <a href="mysubmissions.html">My Submissions</a>
+                        <a href="mysubmissions">My Submissions</a>
                     </li>
                     <li>
-                        <a href="index.html#about">About Us</a>
+                        <a href="index#about">About Us</a>
                     </li>
                 </ul>
             </div>
@@ -123,23 +136,25 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidatee >
+                    <form name="sentMessage" id="contactForm" novalidatee method="POST" action="pushformdata" >
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Company Name</label>
-                                <input type="text"  class="form-control" style="color:#00001a" placeholder="Company Name" id="name" >
+                                <input type="text"  class="form-control" style="color:#00001a" name="companyname" placeholder="Company Name" id="name" >
+
+                             {{ csrf_field() }}
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Brief Description</label>
-                                <input type="email" style="color:#00001a" class="form-control" placeholder="Email" id="email" >
+                                <input type="email" style="color:#00001a" name="email" class="form-control" placeholder="Email" id="email" >
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Problem Statement</label>
-                                <textarea rows="5" class="form-control" placeholder="Problem Statement" id="prob" style="color:#00001a"></textarea>
+                                <textarea rows="5" class="form-control" name="Abstract" placeholder="Problem Statement" id="prob" style="color:#00001a"></textarea>
                             </div>
                         </div><br>
                         <div class="row control-group">
@@ -164,7 +179,9 @@
                                 <button type="submit" class="btn btn-success btn-lg" id="post" style="background-color:#778899;border-color:#778899">Post</button>
                             </div>
                         </div>
+
                     </form>
+                   
                 </div>
             </div>
         </div>
@@ -199,6 +216,13 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+      $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+      });
+  </script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -208,17 +232,26 @@
 
 
     
-
-        $("#post").on('click',function()
+/*
+       $("#post").on('click',function()
         {   var type=$("input[name='type']:checked").val();
             console.log(type);
 
-            var url="companyname="+$('#name').val()+"&email="+$('#email').val()+"&prob="+$('#prob').val()+"&type="+type;
-            console.log(url);
+         //   var url="companyname="+$('#name').val()+"&email="+$('#email').val()+"&prob="+$('#prob').val()+"&type="+type;
+         var formdata={'companyname':$('#name').val(),
+         '&email':$('#email').val(),
+         'prob':$('#prob').val(),
+         'type':type
+     }
+         formdata=JSON.stringify(formdata);
+     
+            console.log(formdata);
+           
             $.ajax({
-                url:"putproblem.php",
+                url:'put',
                 type:"POST",
-                data:url,
+                data:formdata,
+                //dataType:json,
                 async:false,
                 success:function(response)
                 {
@@ -234,8 +267,11 @@
 
             });
 
+          
 
         });
+              
+        */
 
 
     });

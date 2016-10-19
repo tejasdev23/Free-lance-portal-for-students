@@ -10,7 +10,7 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-Route::get('/',function(){
+/*Route::get('/',function(){
 
 	//$users=DB::table('myDB.Users')->where('id','=',1)->get();
 	$users= DB::select('select * from Users where id=1');
@@ -19,9 +19,15 @@ Route::get('/',function(){
 	return $users;
  	
 });
+*/
 
+use Illuminate\Http\Request;
+Route::post('/put','Usercontroller@putdata');
 
-Route::get('/te','Usercontroller@index');
+	
+Route::get('/','Usercontroller@index');
+Route::get('/index','Usercontroller@index');
+
 
 Route::get('/afterlogin','Usercontroller@afterlogin');
 
@@ -33,5 +39,9 @@ Route::get('/startprojects','Usercontroller@startprojects');
 
 
 Route::get('/givechallenge','Usercontroller@givechallenge');
+
+Route::post('/pushformdata','Usercontroller@pushformdata');
+
+//Route::get('/giveproblems','Usercontroller@pushformdata');
 
 
