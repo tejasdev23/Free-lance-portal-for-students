@@ -29,13 +29,18 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src=<?= asset("js/bootstrap.min.js") ?>></script>
+     <link rel="stylesheet" href=<?= asset('css/angular-material.css') ?> >
+     <script src="js/angular.min.js"></script>
+<script src='js/angular-animate.min.js'></script>
+        <script src='js/angular-aria.min.js'></script>
+        <script src='js/angular-material.min.js'></script>
 
     
 
 
 </head>
 
-<body>
+<body ng-app="loginapp">  
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -105,14 +110,14 @@
 
         <!-- Projects Row -->
         <div class="row">
-            <div class="col-md-4 portfolio-item">
+      <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front" style=" background: url(http://placehold.it/750x450) center no-repeat;">
-     <!-- <span class="name">David Walsh</span>-->`
+    <div class="front"  style=" background: url(http://placehold.it/750x450) center no-repeat;">
+     <!-- <span class="name">David Walsh</span>-->
 
     </div>
-    <div class="back" >
+    <div class="back" style="background: url(img/cake.png) center no-repeat;">
       
      
       <p></p>
@@ -257,7 +262,15 @@
     </div>
     
     <!-- /.container -->
+<script>
 
+var loginapp=angular.module('loginapp',['ngMaterial']).run(function(){
+
+                console.log("thank you DAD");
+            });
+
+
+</script>
   
 
 </body>

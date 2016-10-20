@@ -42,6 +42,13 @@ Route::get('/givechallenge','Usercontroller@givechallenge');
 
 Route::post('/pushformdata','Usercontroller@pushformdata');
 
+
+Route::get('/projectstheme1',function()
+{
+
+	return view('projectstheme1');
+});
+
 //Route::get('/giveproblems','Usercontroller@pushformdata');
 
 

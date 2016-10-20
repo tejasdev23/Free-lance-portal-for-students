@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="demo">
+	<head>
+
+		<title>Hello AngularJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<script >
+    		angular.module('demo', [])
+.controller('Hello', function($scope, $http) {
+   
+            $http.post('http://139.59.30.133:9090/', data, config)
+            .success(function (data, status, headers, config) {
+                $scope.PostDataResponse = data;
+            })
+            .error(function (data, status, header, config) {
+                $scope.ResponseDetails = "Data: " + data +
+                    "<hr />status: " + status +
+                    "<hr />headers: " + header +
+                    "<hr />config: " + config;
+            });
+        };
+});
+
+    	</script>
+	</head>
+
+	<body>
+		<div ng-controller="Hello">
+			<p>The ID is {{greeting[0]}}</p>
+		
+		</div>
+	</body>
+</html>
