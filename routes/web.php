@@ -24,7 +24,7 @@
 use Illuminate\Http\Request;
 Route::post('/put','Usercontroller@putdata');
 
-	
+Route::get('/logout','Usercontroller@logout');	
 Route::get('/','Usercontroller@index');
 Route::get('/index','Usercontroller@index');
 
@@ -40,7 +40,7 @@ Route::get('/startprojects','Usercontroller@startprojects');
 
 Route::get('/givechallenge','Usercontroller@givechallenge');
 
-Route::post('/pushformdata','Usercontroller@pushformdata');
+Route::post('/pushformdata','Probscontroller@pushformdata');
 
 
 Route::get('/projectstheme1',function()
@@ -52,3 +52,7 @@ Route::get('/projectstheme1',function()
 //Route::get('/giveproblems','Usercontroller@pushformdata');
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

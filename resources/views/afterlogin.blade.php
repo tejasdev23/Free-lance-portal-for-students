@@ -59,7 +59,7 @@
             <div class="collapse navbar-collapse" id="navcore">
                 <ul class="nav navbar-nav">
                     <li style="margin-top:15px; color:white;">
-                     WELCOME 
+                     WELCOME   {{ Auth::user()->name }}
                     </li>
                     
                     <li>
@@ -76,7 +76,7 @@
                             <ul class="dropdown-menu">
                                 
                                 <li><a href="#">Edit profile</a></li>
-                                <li><a href="logout.php" >Logout</a></li>
+                                <li><a href="logout" >Logout</a></li>
                             </ul>
 
                         </div>

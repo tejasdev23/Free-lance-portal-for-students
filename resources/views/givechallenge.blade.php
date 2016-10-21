@@ -154,7 +154,7 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Problem Statement</label>
-                                <textarea rows="5" class="form-control" name="Abstract" placeholder="Problem Statement" id="prob" style="color:#00001a"></textarea>
+                                <textarea rows="5" class="form-control" name="abstract" placeholder="Problem Statement" id="prob" style="color:#00001a"></textarea>
                             </div>
                         </div><br>
                         <div class="row control-group">

@@ -27,7 +27,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src=<?= asset("js/bootstrap.min.js") ?>></script>
 
-    
+   
 
 
 
@@ -43,8 +43,14 @@
         <script src='js/angularinit.js' ></script>
 
 
+
 </head>
-<body ng-app="MyApp">   
+
+<body ng-app="MyApp" ng-hide="false" >
+
+
+ 
+
  
     
             <md-nav-bar class="navbar navbar-fixed-top navbar-inverse" >
@@ -58,9 +64,10 @@
                                 <md-nav-item md-nav-href="#contactus" name="contact"><span  style="color:white;">Contact Us </span></md-nav-item>
                        
                  
-                      
-                            <md-button  class= "md-accent md-raised  md-hue-5 "   data-toggle="modal" data-target="#login" >LOGIN</md-button>
-                            <md-button class= "md-accent md-raised  md-hue-5  "  data-toggle="modal" data-target="#signup" >SIGN UP</md-button>
+                      <div md-theme="altTheme">
+                            <md-button  class= "md-primary md-raised  md-hue-5 " href="/login"   >LOGIN</md-button>
+                            </div>
+                            <md-button class= "md-accent md-raised  md-hue-5  "  href="/register"  >SIGN UP</md-button>
                 
                      
 
@@ -125,7 +132,13 @@
             </h2>
             <div class="row">
 <div  class="col-md-4" layout="column">
-        <md-card>
+        <md-card >
+         <md-card-header>
+                <md-card-header-text md-theme="altTheme">
+                    <span class="md-title">THEME 1</span>
+                    <span class="md-subhead">thoda sa description</span>
+                </md-card-header-text>
+        </md-card-header>
             <img ng-src="img/cake.png" class="md-card-image" >
             <md-card-title>
                 <md-card-title-text>
@@ -146,6 +159,12 @@
 
 <div  class="col-md-4" layout="column">
         <md-card>
+           <md-card-header>
+                <md-card-header-text>
+                    <span class="md-title">THEME 2</span>
+                    <span class="md-subhead">thoda sa description</span>
+                </md-card-header-text>
+        </md-card-header>
             <img ng-src="img/cabin.png" class="md-card-image" >
             <md-card-title>
                 <md-card-title-text>
@@ -168,6 +187,12 @@
 
 <div  class="col-md-4" layout="column">
         <md-card>
+               <md-card-header>
+                <md-card-header-text>
+                    <span class="md-title">THEME 3  </span>
+                    <span class="md-subhead">thoda sa description</span>
+                </md-card-header-text>
+        </md-card-header>
             <img ng-src="img/game.png" class="md-card-image" >
             <md-card-title>
                 <md-card-title-text>
