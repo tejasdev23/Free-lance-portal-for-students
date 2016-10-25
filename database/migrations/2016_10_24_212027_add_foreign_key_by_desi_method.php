@@ -17,6 +17,9 @@ class AddForeignKeyByDesiMethod extends Migration
         Schema::table('questions', function(Blueprint $table){
     $sql = "ALTER TABLE myDB.questions ADD FOREIGN KEY (category_id) REFERENCES categories(id)"; 
     DB::connection()->getPdo()->exec($sql);
+
+     $sql1 = "ALTER TABLE myDB.questions ADD FOREIGN KEY (user_id) REFERENCES users(id)"; 
+    DB::connection()->getPdo()->exec($sql1);
 });
     }
 

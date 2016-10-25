@@ -36,12 +36,12 @@
    
 
 
- <script src="js/angular.min.js"></script>
-<script src='js/angular-animate.min.js'></script>
-        <script src='js/angular-aria.min.js'></script>
-        <script src='js/angular-material.min.js'></script>
+ <script src=<?=asset("js/angular.min.js") ?>></script>
+<script src=<?=asset('js/angular-animate.min.js') ?>></script>
+        <script src=<?=asset('js/angular-aria.min.js') ?>></script>
+        <script src=<?=asset('js/angular-material.min.js') ?>></script>
           <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.20/angular-messages.js"></script>
-        <script src='js/angularinit.js' ></script>
+        <script src=<?=asset('js/angularinit.js') ?> ></script>
 
 
 
@@ -51,7 +51,15 @@
 @yield('page-content')
 
 
+<script>
 
+.config(function($mdThemingProvider) {
+  $mdThemingProvider.theme('dark-grey').backgroundPalette('grey').dark();
+  $mdThemingProvider.theme('dark-orange').backgroundPalette('orange').dark();
+  $mdThemingProvider.theme('dark-purple').backgroundPalette('deep-purple').dark();
+  $mdThemingProvider.theme('dark-blue').backgroundPalette('blue').dark();
+});
+</script>
 </body>
 
 

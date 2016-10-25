@@ -227,7 +227,8 @@
                                 </div>
                             </div>
                             <div class="form-bottom contact-form">
-                                <form role="form" action="" method="">
+                                <form role="form" action="mailsend" method="POST">
+                                {{csrf_field()}}
                                     <div class="form-group">
                                         <label class="sr-only" for="contact-email">Email</label>
                                         <input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">

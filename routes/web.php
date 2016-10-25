@@ -22,15 +22,22 @@
 */
 
 use Illuminate\Http\Request;
-Route::get('/postaquestion','postController@page');
+Route::post('forum/question/saveReply','forumController@saveReply');
 
+
+Route::get('/postaquestion','postController@page');
+Route::get('/forum','forumController@home');
 Route::post('/postthat','postController@enterdata');
+
+Route::get('/forum/question/{slug}','forumController@viewPost');
 Route::post('/put','Usercontroller@putdata');
 
 Route::get('/logout','Usercontroller@logout');	
 Route::get('/',['as' => 'home','uses' => 'Usercontroller@index']);
 Route::get('/index','Usercontroller@index');
 
+
+Route::post('/mailsend','mailController@mailsend');
 
 Route::get('/afterlogin','Usercontroller@afterlogin');
 

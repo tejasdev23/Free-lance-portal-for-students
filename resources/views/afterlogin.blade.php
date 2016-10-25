@@ -62,12 +62,19 @@
                     <li style="margin-top:15px; color:white;">
                      WELCOME   {{ Auth::user()->name }}
                     </li>
-                    
                     <li>
-                        <a href="index.html#about">About Us</a>
+                        <a href="mysubmissions">My submissions</a>
+                    </li>
+
+                    <li>
+                        <a href="givechallenge">Give a Challenge</a>
+                    </li>
+                    <li>
+                        <a href="startprojects">Solve a Challenge</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                     <li><a href="/forum" >Discussion Forum</a>  </li>
                     <li><a href="/postaquestion" >Post a Question </a>  </li>
                         <li><a href="#"><img src="img/notify.png" style="width:50px;" /></a></li> 
                         <li>
@@ -90,7 +97,9 @@
         </div>
         <!-- /.container -->
     </nav>
-
+    <br>
+    <br>
+    <br>
     <!-- Full Width Image Header -->
     
         <div class="jumbotron">

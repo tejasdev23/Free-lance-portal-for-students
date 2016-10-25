@@ -10,6 +10,7 @@ use App\usergivenprobs;
 use App\questions;
 use App\categories;
 use App\Http\Requests\CreatePostRequest;
+use Auth;
 
 class postController extends Controller
 {
@@ -38,7 +39,8 @@ echo "hit here";
 	$questions->Type = $type;
 	$questions->email = $email;
 	$questions->description = $desc;
-	
+	$questions->user_id =Auth::user()->id;
+	$questions->slug=$question;
 	$cat_id=DB::table('categories')->where('name', $type)->value('id');
 	echo $cat_id;
 
@@ -46,7 +48,7 @@ echo "hit here";
 	$questions->save();
 	Session::flash('success', 'Save successful');
 
-return Redirect::to('/postaquestion');
+return Redirect::to('/forum');
 
 
 
