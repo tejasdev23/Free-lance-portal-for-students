@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Auth;
 
+
 class Usercontroller extends Controller
 {
 	public function index()

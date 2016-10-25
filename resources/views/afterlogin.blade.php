@@ -34,6 +34,7 @@
 <script src='js/angular-animate.min.js'></script>
         <script src='js/angular-aria.min.js'></script>
         <script src='js/angular-material.min.js'></script>
+       
 
     
 
@@ -67,6 +68,7 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/postaquestion" >Post a Question </a>  </li>
                         <li><a href="#"><img src="img/notify.png" style="width:50px;" /></a></li> 
                         <li>
                         <div class="dropdown">

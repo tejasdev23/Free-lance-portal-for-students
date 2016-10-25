@@ -1,83 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-    
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>HOME</title>
-     <link rel="stylesheet" href=<?= asset('css/angular-material.css') ?> >
-  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet"> -->
- <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
 
-        
-          
-
-    <link href=<?= asset("css/bootstrap.min.css") ?> rel="stylesheet">
-
-    <link href=<?= asset("css/mystyles.css") ?> rel="stylesheet">
-       <!-- jQuery -->
-    <script src=<?= asset("js/jquery.js") ?>></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src=<?= asset("js/bootstrap.min.js") ?>></script>
-
-   
-
-
-
-
-
-   
-
-
- <script src="js/angular.min.js"></script>
-<script src='js/angular-animate.min.js'></script>
-        <script src='js/angular-aria.min.js'></script>
-        <script src='js/angular-material.min.js'></script>
-        <script src='js/angularinit.js' ></script>
-
-
-
-</head>
-
-<body ng-app="MyApp" ng-hide="false" >
 
 
  
-
+@extends('layouts.masters.main')
  
     
-            <md-nav-bar class="navbar navbar-fixed-top navbar-inverse" >
-                           
-                        <md-nav-item  md-nav-href="#" name="logo" ><span  style="color:white;">LOGO </span> </md-nav-item>
-               
-               <md-nav-item md-nav-href="#aboutus" name="Aboutus"><span  style="color:white;">ABout Us</span></md-nav-item>
-                        
-                               <md-nav-item md-nav-href="#recent" name="Recent"><span  style="color:white;">Recent Projects </span></md-nav-item>
-                       
-                                <md-nav-item md-nav-href="#contactus" name="contact"><span  style="color:white;">Contact Us </span></md-nav-item>
-                       
-                 
-                      <div md-theme="altTheme">
-                            <md-button  class= "md-primary md-raised  md-hue-5 " href="/login"   >LOGIN</md-button>
-                            </div>
-                            <md-button class= "md-accent md-raised  md-hue-5  "  href="/register"  >SIGN UP</md-button>
-                
-                     
-
-            </md-nav-bar>
+            @section('page-content')
           
-        <div class="container">
-        
-            
-            
-        </div>
+              @include('layouts.partials.nav')
+          
 
      
  
@@ -85,14 +18,14 @@
  
 
     <!-- Full Width Image Header -->
-    <header class="header-image img-responsive"  style="background: url('img/super-hero-large.png') no-repeat center scroll,rgba(0,0,201,0.1); width:100%;">
-        <div class="headline">
+    <div >
+        <div style="background-image: url('img/backhome.jpg');height:500px;" >
             <div class="container" >
-                <h1 style="color:#234435;">HELLO ITS ME</h1>
-                <h2 style="color:#234234;">I'm in california ..... </h2>
+                <h1 style="color:#101423;">HELLO ITS ME</h1>
+                <h2 style="color:#104234;">I'm in california ..... </h2>
             </div>
         </div>
-    </header>
+    </div>
 
     <!-- Page Content -->
     <div class="container">
@@ -339,7 +272,7 @@
       
    
   
-    </body>
+     
 <!-- LOGIN AND SIGNUP MODALS -->
 
 
@@ -571,5 +504,3 @@ font-family: 'Raleway', sans-serif;">
 
 
 
-
-</html>

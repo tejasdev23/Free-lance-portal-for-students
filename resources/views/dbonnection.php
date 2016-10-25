@@ -17,15 +17,4 @@ $connection=mysqli_connect('$DBHOST','$DBUSER','$DBUSER','$DBNAME');
 	{
 		echo mysql_error();
 	}
-
-
-
-
-
-
-
-
-
-
-
 ?>
