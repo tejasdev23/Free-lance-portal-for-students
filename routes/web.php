@@ -23,7 +23,10 @@
 
 use Illuminate\Http\Request;
 Route::post('forum/question/saveReply','forumController@saveReply');
-
+Route::get('/newindex',function()
+{
+	return view('newindex');
+});
 
 Route::get('/postaquestion','postController@page');
 Route::get('/forum','forumController@home');

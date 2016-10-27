@@ -104,12 +104,21 @@
     
         <div class="jumbotron">
             <div class="container" style="margin-right:150px;" >
+            <div class="col-lg-3 col-lg-offset-1">
+            <a href="mysubmissions"><img class="img-circle img-responsive " src="img/submissions.png">
+            </a>
+            <p style="text-align: center;">My submissions</p>
+            </div>
 
-            <a href="mysubmissions"><img class="img-circle img-responsive col-lg-3 col-lg-offset-1" src="img/submissions.png"></a>
+            <div class="col-lg-3 col-lg-offset-1">
+            <a href="givechallenge"><img class="img-circle img-responsive " src="img/solve.png"> </a>
+             <p style="text-align: center;">Give a challenge</p>
+            </div>
 
-            <a href="givechallenge"><img class="img-circle img-responsive col-lg-3 col-lg-offset-1" src="img/solve.png"> </a>
-
-            <a href="startprojects"><img  class="img-circle img-responsive col-lg-3 col-lg-offset-1" src="img/givechallenge.png"></a>
+            <div class=" col-lg-3 col-lg-offset-1">
+            <a href="startprojects"><img  class="img-circle img-responsive" src="img/givechallenge.png"></a>
+             <p style="text-align: center;">Start a Project</p>
+            </div>
             </div>
         </div>
 
@@ -117,7 +126,7 @@
 
         <div class="container">
 
-        <h1>PROJECTS TO CONTRIBUTE</h1>
+        <h1>Popular projects</h1>
 
         <!-- Projects Row -->
         <div class="row">

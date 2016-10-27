@@ -1,16 +1,152 @@
-
-
-
-
-
- 
-@extends('layouts.masters.main')
- 
+<!DOCTYPE html>
+<html lang="en">
     
-            @section('page-content')
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>HOME</title>
+     <link rel="stylesheet" href=<?= asset('css/angular-material.css') ?> >
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet"> -->
+ <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+   <style type="text/css">
+              
+              html { 
+  background: url("img/try3.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+          </style>
+        
           
-              @include('layouts.partials.nav')
-          
+
+    <link href=<?= asset("css/bootstrap.min.css") ?> rel="stylesheet">
+
+    <link href=<?= asset("css/mystyles.css") ?> rel="stylesheet">
+       <!-- jQuery -->
+    <script src= <?= asset("js/jquery.js") ?> ></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src=<?= asset("js/bootstrap.min.js") ?>></script>
+
+   
+
+
+
+
+
+   
+
+
+ <script src=<?=asset("js/angular.min.js") ?>></script>
+<script src=<?=asset('js/angular-animate.min.js') ?>></script>
+        <script src=<?=asset('js/angular-aria.min.js') ?>></script>
+        <script src=<?=asset('js/angular-material.min.js') ?>></script>
+          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.20/angular-messages.js"></script>
+        <script src=<?=asset('js/angularinit.js') ?> ></script>
+
+
+
+</head>
+<body ng-app="MyApp" >
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="img/cover2.jpg" alt="Chania">
+    </div>
+
+    <div class="item">
+      <img src="img/cover3.png" alt="Chania">
+    </div>
+
+    <div class="item">
+      <img src="img/cover4.jpg" alt="Flower">
+    </div>
+
+    <div class="item">
+      <img src="img/captain.jpeg" alt="Flower">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-fixed-top" role="navigation" style="background-color:#ffffff;">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navcore">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index">MT</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navcore">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#recent">Recent Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contactus">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-right">
+                
+                <li  >
+        
+        
+
+        <md-button style="display:inline-block;" class= "md-accent md-raised md-hue-5" href="/login">LOGIN</md-button>
+       
+
+        <md-button style="display:inline-block;"  class= "md-accent md-raised md-hue-5" href="/register">SIGN UP</md-button>
+        
+        </li>
+        
+
+                </ul>
+            </div>
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+       
 
      
  
@@ -18,20 +154,10 @@
  
 
     <!-- Full Width Image Header -->
-    <div >
-        <div style="background-image: url('img/backhome.jpg');height:500px;" >
-            <div class="container" >
-                <h1 style="color:#101423;">HELLO ITS ME</h1>
-                <h2 style="color:#104234;">I'm in california ..... </h2>
-            </div>
-        </div>
-    </div>
+<div id="fullscreen" >  
 
     <!-- Page Content -->
     <div class="container">
-
-      
-
          <md-card>
     <md-card-content>
           
@@ -199,21 +325,30 @@
                 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBkdJGwpF3awohXCT4I7NvJhGxQS32KnL8'></script>
                 <div style='overflow:hidden;width:800px;height:475px' >
                     <a href='https://addmap.net/'>map generator</a> 
+                    <md-card>
                 <div id='gmap_canvas'  style='border-radius: 100px;width:800px;height:475px'>
                     
                 </div>
+                </md-card>
                     <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
                 </div> 
 
             <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=ee1ee8b2a881606570b0b797879ea34ff17654f1'></script>
 
 
-            <script type='text/javascript'>function init_map(){var myOptions = {zoom:13,center:new google.maps.LatLng(19.1055,72.83687359999999),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(19.1055,72.83687359999999)});infowindow = new google.maps.InfoWindow({content:'<strong> Dwarkadas J. Sanghvi College Of Engineering</strong><br>Plot No.U-15, J.V.P.D. Scheme Bhaktivedanta Swami Marg, Vile Parle West Mumbai, Maharashtra 400056 India<br>4000056 mumbai<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+            <script type='text/javascript'>function init_map()
+            {var myOptions = {zoom:13,center:new google.maps.LatLng(19.1055,72.83687359999999),mapTypeId: google.maps.MapTypeId.ROADMAP};
+            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+            marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(19.1055,72.83687359999999)});
+            infowindow = new google.maps.InfoWindow({content:'<strong> Dwarkadas J. Sanghvi College Of Engineering</strong><br>Plot No.U-15, J.V.P.D. Scheme Bhaktivedanta Swami Marg, Vile Parle West Mumbai, Maharashtra 400056 India<br>4000056 mumbai<br>'});
+            google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}
+            google.maps.event.addDomListener(window, 'load', init_map);</script>
 
 
 
             </div>
             <div class="col-md-4 ">
+                <md-card>
                <div class="container">
                     <div class="row">
                         <div class="col-md-4  form-box">
@@ -227,6 +362,7 @@
                                 </div>
                             </div>
                             <div class="form-bottom contact-form">
+                               
                                 <form role="form" action="mailsend" method="POST">
                                 {{csrf_field()}}
                                     <div class="form-group">
@@ -243,11 +379,12 @@
                                     </div>
                                     <button type="submit" class="btn">Send message</button>
                                 </form>
+                               
                             </div>
                         </div>
                     </div>
                 </div>
-
+                </md-card>
             </div>
         </div>
         
@@ -264,7 +401,7 @@
 
 </div>
 
-
+</div>
 
     <!-- /.container -->
 
@@ -334,7 +471,7 @@
       <p>A bunch of text</p>
     </div>
     <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
   </div>
 <!--Signup modla -->
@@ -491,7 +628,16 @@ font-family: 'Raleway', sans-serif;">
     </div>
 
 
+<script>
 
+
+</script>
+</body>
+
+
+
+
+</html>
 
 
 

@@ -25,15 +25,6 @@ class HomeController extends Controller
     {
         return view('afterlogin');
     }
-    public function mailsend(Request $request)
-    {
-        echo "hit here";
-        $formdata=$request;
-        $email=$formdata['email'];
-        $subject=$formdata['subject'];
-        $message=$formdata['message'];
-
-        
-    });
-    }
+ 
+    
 }

@@ -37,10 +37,10 @@
 			</ul>
 		</div>
 	</div>
-
+</div>
 @empty
 	<p> No posts found</p>
-</div>
+
 @endforelse
 
 

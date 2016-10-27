@@ -1,5 +1,5 @@
    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-fixed-top" role="navigation" style="background-color:#ffffff;">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">MT</a>
+                <a class="navbar-brand" href="index">MT</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navcore">
@@ -26,14 +26,14 @@
                 </ul>
                 <ul class="navbar-right">
                 
-                <li md-theme="alttheme" >
+                <li  >
         
         
 
-        <md-button style="display:inline-block;" class= "md-primary md-raised md-hue-5" href="/login">LOGIN</md-button>
+        <md-button style="display:inline-block;" class= "md-accent md-raised md-hue-5" href="/login">LOGIN</md-button>
        
 
-        <md-button style="display:inline-block;"  class= "md-primary md-raised md-hue-5" href="/register">SIGN UP</md-button>
+        <md-button style="display:inline-block;"  class= "md-accent md-raised md-hue-5" href="/register">SIGN UP</md-button>
         
         </li>
         

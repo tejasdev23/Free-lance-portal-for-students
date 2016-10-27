@@ -71,8 +71,8 @@
     <header class="header-image" style=" background: url('img/startyourproj.png') no-repeat center scroll; ">
         <div class="headline">
             <div class="container">
-                <h1>Solving a Project-Problem Statement</h1>
-                <h2>Will Knock Your Socks Off</h2>
+                <h1>PROJECT LIST</h1>
+                <h2></h2>
             </div>
         </div>
     </header>

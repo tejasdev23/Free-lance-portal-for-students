@@ -72,6 +72,9 @@
 
 
 <div ng-app="MyApp" >
+<div layout="row" layout-align="center center">
+<div >
+<md-card>
 <form name="projectForm" ng-controller="formCtrl" action="postthat" method="POST">
  {{ csrf_field() }}
  <md-input-container class="md-block">
@@ -126,7 +129,8 @@
 
 
 </form>
- 
+ </md-card>
+ </div>
 </div>
 <script>
 
