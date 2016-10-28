@@ -171,7 +171,7 @@
         <div class="featurette" id="aboutus" >
             <img class="featurette-image img-circle img-responsive pull-right" src="img/aboutus.png" style="width:500px;height:500px">
             <h2 class="featurette-heading">ABOUT US
-                <span class="text-muted">Will Catch Your Eye</span>
+                <span class="text-muted"></span>
             </h2>
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
@@ -192,28 +192,28 @@
         <!-- Projects Row -->
          <!-- Projects Row -->
         <h2 class="featurette-heading" id="recent">RECENT PROJECTS
-                <span class="text-muted">Are Also Awesome</span>
+                <span class="text-muted"></span>
             </h2>
             <div class="row">
 <div  class="col-md-4" layout="column">
         <md-card >
          <md-card-header>
                 <md-card-header-text md-theme="altTheme">
-                    <span class="md-title">THEME 1</span>
+                    <span class="md-title">Android and Web Applications</span>
                     <span class="md-subhead">thoda sa description</span>
                 </md-card-header-text>
         </md-card-header>
             <img ng-src="img/cake.png" class="md-card-image" >
             <md-card-title>
                 <md-card-title-text>
-                    <span class="md-headline">In-card mixed actions</span>
+                    <span class="md-headline"></span>
                 </md-card-title-text>
             </md-card-title>
           
             <md-card-content>
                 <p>
             The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well..
                 </p>
 
                 </md-card-content>
@@ -225,14 +225,14 @@
         <md-card>
            <md-card-header>
                 <md-card-header-text>
-                    <span class="md-title">THEME 2</span>
+                    <span class="md-title">Cloud Computing</span>
                     <span class="md-subhead">thoda sa description</span>
                 </md-card-header-text>
         </md-card-header>
             <img ng-src="img/cabin.png" class="md-card-image" >
             <md-card-title>
                 <md-card-title-text>
-                    <span class="md-headline">In-card mixed actions</span>
+                    <span class="md-headline"></span>
                 </md-card-title-text>
             </md-card-title>
            
@@ -253,14 +253,14 @@
         <md-card>
                <md-card-header>
                 <md-card-header-text>
-                    <span class="md-title">THEME 3  </span>
+                    <span class="md-title">Internet Of Things</span>
                     <span class="md-subhead">thoda sa description</span>
                 </md-card-header-text>
         </md-card-header>
             <img ng-src="img/game.png" class="md-card-image" >
             <md-card-title>
                 <md-card-title-text>
-                    <span class="md-headline">In-card mixed actions</span>
+                    <span class="md-headline"></span>
                 </md-card-title-text>
             </md-card-title>
           
@@ -311,7 +311,7 @@
         <div class="featurette"  id="map" >
             <img class="featurette-image img-circle img-responsive pull-right" src="img/LOCATION.png">
             <h2 class="featurette-heading">CONTACT US
-                <span class="text-muted">Will Seal the Deal.</span>
+                <span class="text-muted"></span>
             </h2>
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
@@ -566,7 +566,7 @@ font-family: 'Raleway', sans-serif;">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>Theme Title</h2>
                             <hr class="star-primary">
                             <img src="img/cake.png" class="img-responsive img-centered" alt="">
                            
@@ -592,7 +592,7 @@ font-family: 'Raleway', sans-serif;">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>Theme Title</h2>
                             <hr class="star-primary">
                             <img src="img/cabin.png" class="img-responsive img-centered" alt="">
                            
@@ -620,7 +620,7 @@ font-family: 'Raleway', sans-serif;">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>Theme Title</h2>
                             <hr class="star-primary">
                             <img src="img/game.png" class="img-responsive img-centered" alt="">
                            

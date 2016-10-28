@@ -40,7 +40,6 @@ Route::get('/',['as' => 'home','uses' => 'Usercontroller@index']);
 Route::get('/index','Usercontroller@index');
 
 
-Route::post('/mailsend','mailController@contactus');
 
 Route::get('/afterlogin','Usercontroller@afterlogin');
 
@@ -48,7 +47,7 @@ Route::get('/afterlogin','Usercontroller@afterlogin');
 Route::get('/mysubmissions','Usercontroller@mysubmissions');
 
 
-Route::get('/startprojects','Usercontroller@startprojects');
+Route::get('/startprojects','Usercontroller@retproj');
 
 
 Route::get('/givechallenge','Usercontroller@givechallenge');

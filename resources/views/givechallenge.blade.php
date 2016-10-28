@@ -22,7 +22,22 @@
     <link href="css/give-challenge.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/mystyles.css" rel="stylesheet">
+    <style type="text/css">
+              
+    body {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: none;
+}
 
+html {
+  background: url(<?=asset("img/post.jpg")?>) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+          </style>  
     
 </head>
 
@@ -52,13 +67,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">MT</a>
+                <a class="navbar-brand" href="/">MT</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navcore">
                 <ul class="nav navbar-nav">
-                    <li style="margin-top:15px; color:white;">
-                     WELCOME   {{ Auth::user()->name }}
+                    <li >
+                                        <a href="/afterlogin">WELCOME  {{ Auth::user()->name }} </a>
+                    
                     </li>
                     <li>
                         <a href="mysubmissions">My submissions</a>
@@ -74,11 +90,11 @@
                 <ul class="nav navbar-nav navbar-right">
                      <li><a href="/forum" >Discussion Forum</a>  </li>
                     <li><a href="/postaquestion" >Post a Question </a>  </li>
-                        <li><a href="#"><img src="img/notify.png" style="width:50px;" /></a></li> 
+                        <li><a href="#"><img src="img/notify.png" style="width:30px;" /></a></li> 
                         <li>
                         <div class="dropdown">
                             <a   class=" dropdown-toggle"   data-toggle="dropdown" >
-                                <img style="margin-top:15px;width:50px;" id="profile" class="img-circle" src="img/businessman.png" />
+                                <img style="margin-top:15px;width:30px;" id="profile" class="img-circle" src="img/businessman.png" />
                             </a> 
                             <ul class="dropdown-menu">
                                 
@@ -96,8 +112,10 @@
         <!-- /.container -->
     </nav>
 
+
+
     <!-- Full Width Image Header -->
-    <header class="header-image" style="  background: url('img/startyourproj.png') no-repeat center scroll;" >
+    <header class="header-image" style="  " >
         <div class="headline">
             <div class="container">
                 <h1>Give a Project-Problem Statement</h1>
@@ -152,10 +170,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-8 col-lg-offset-2" style="background-color: white;">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidatee method="POST" action="pushformdata" >
+                    <form name="sentMessage" id="contactForm" novalidatee method="POST" action="pushformdata"  >
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Company Name</label>
@@ -195,7 +213,7 @@
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg" id="post" style="background-color:#778899;border-color:#778899">Post</button>
+                                <button type="submit" class="btn btn-danger btn-lg btn-red" id="post" >Post</button>
                             </div>
                         </div>
 
@@ -225,7 +243,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright © TP-MGR Productions</p>
+                    <p style="color:white">Copyright © TP-MGR Productions</p>
                 </div>
             </div>
         </footer>

@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>HACKATHON</title>
+    <title>Login</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -29,7 +29,7 @@
 }
 
 html {
-  background: url("img/after5.jpg") no-repeat center center fixed; 
+  background: url(<?=asset("img/after5.jpg")?>) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -53,7 +53,7 @@ html {
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        HACKATHON
+                       MT
                     </a>
                 </div>
 

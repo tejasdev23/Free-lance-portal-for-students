@@ -14,7 +14,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navcore">
                 <ul class="nav navbar-nav">
-                    <li style="margin-top:15px; color:white;">
+                    <li style="margin-top:15px; ">
                      WELCOME   {{ Auth::user()->name }}
                     </li>
                     <li>

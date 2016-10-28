@@ -63,13 +63,13 @@ html {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">MT</a>
+                <a class="navbar-brand" href="/">MT</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navcore">
                 <ul class="nav navbar-nav">
-                    <li style="margin-top:15px; color:white;">
-                     WELCOME   {{ Auth::user()->name }}
+                    <li >
+                     <a href="/afterlogin">WELCOME   {{ Auth::user()->name }} </a>
                     </li>
                     <li>
                         <a href="mysubmissions">My submissions</a>
@@ -79,17 +79,17 @@ html {
                         <a href="givechallenge">Give a Challenge</a>
                     </li>
                     <li>
-                        <a href="startprojects">Solve a Challenge</a>
+                        <a href="projectstheme1"  >Solve a Challenge</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                      <li><a href="/forum" >Discussion Forum</a>  </li>
                     <li><a href="/postaquestion" >Post a Question </a>  </li>
-                        <li><a href="#"><img src="img/notify.png" style="width:50px;" /></a></li> 
+                        <li><a href="#"><img src="img/notify.png" style="width:30px;" /></a></li> 
                         <li>
                         <div class="dropdown">
                             <a   class=" dropdown-toggle"   data-toggle="dropdown" >
-                                <img style="margin-top:15px;width:50px;" id="profile" class="img-circle" src="img/businessman.png" />
+                                <img style="margin-top:15px;width:30px;" id="profile" class="img-circle" src="img/businessman.png" />
                             </a> 
                             <ul class="dropdown-menu">
                                 
@@ -151,11 +151,11 @@ html {
       <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front"  style=" background: url(img/cake.png) center no-repeat;">
+    <div class="front"  style=" background: url(img/FLIGHT.png) center no-repeat;">
      <!-- <span class="name">David Walsh</span>-->
 
     </div>
-    <div class="back" style=" background: url(img/FLIGHT.png) center no-repeat;" >
+    <div class="back"  >
      <br>
      <br>
      <br>
@@ -173,12 +173,17 @@ html {
    <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front"  style=" background: url(img/FLIGHT.png) center no-repeat;">
+    <div class="front"  style=" background: url(img/flash.jpg) center no-repeat;">
      <!-- <span class="name">David Walsh</span>-->
 
     </div>
-    <div class="back" style="background: url(img/cake.png) center no-repeat;">
-      
+    <div class="back" >
+       <br>
+     <br>
+     <br>
+
+     
+      <h1><a href="projectstheme1"><p style="text-align:center;">Read more</p> </a></h1>
      
       <p></p>
     </div>
@@ -191,17 +196,22 @@ html {
         <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front" style=" background: url(http://placehold.it/750x450) center no-repeat;">
+    <div class="front" style=" background: url(img/after3.png ) center no-repeat;">
      <!-- <span class="name">David Walsh</span>-->
 
     </div>
     <div class="back" >
-      
+       <br>
+     <br>
+     <br>
+
+     
+      <h1><a href="projectstheme1"><p style="text-align:center;">Read more</p> </a></h1>
      
       <p></p>
     </div>
   </div>
-</div>
+</div>l
             </div>
          <!-- /.row -->
 
@@ -209,13 +219,18 @@ html {
             <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front" style=" background: url(http://placehold.it/750x450) center no-repeat;">
+    <div class="front" style=" background: url(img/hadoop.png) center no-repeat;">
      <!-- <span class="name">David Walsh</span>-->
 
     </div>
     <div class="back" >
       
+      <br>
+     <br>
+     <br>
+
      
+      <h1><a href="projectstheme1"><p style="text-align:center;">Read more</p> </a></h1>
       <p></p>
     </div>
   </div>
@@ -226,12 +241,17 @@ html {
     <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front" style=" background: url(http://placehold.it/750x450) center no-repeat;">
+    <div class="front" style=" background: url(img/circus.png) center no-repeat;">
      <!-- <span class="name">David Walsh</span>-->
 
     </div>
     <div class="back" >
-      
+       <br>
+     <br>
+     <br>
+
+     
+      <h1><a href="projectstheme1"><p style="text-align:center;">Read more</p> </a></h1>
      
       <p></p>
     </div>
@@ -243,20 +263,25 @@ html {
                 <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front" style=" background: url(http://placehold.it/750x450) center no-repeat;">
+    <div class="front" style=" background: url(img/submarine.png) center no-repeat;">
      <!-- <span class="name">David Walsh</span>-->
 
     </div>
     <div class="back" >
       
+      <br>
+     <br>
+     <br>
+
      
+      <h1><a href="projectstheme1"><p style="text-align:center;">Read more</p> </a></h1>
       <p></p>
     </div>
   </div>
 </div>
             </div>
 
-        <!-- Pagination -->
+        <!-- Pagination 
         <div class="row text-center">
             <div class="col-lg-12">
                 <ul class="pagination">
@@ -284,6 +309,7 @@ html {
                 </ul>
             </div>
         </div>
+        -->
         <!-- /.row -->
 
   

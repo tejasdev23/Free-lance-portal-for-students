@@ -38,8 +38,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navcore">
                 <ul class="nav navbar-nav">
-                    <li style="margin-top:15px; color:white;">
-                     WELCOME   {{ Auth::user()->name }}
+                    <li >
+                     <a href="/afterlogin" >WELCOME   {{ Auth::user()->name }} </a>
                     </li>
                     <li>
                         <a href="mysubmissions">My submissions</a>
@@ -81,7 +81,7 @@
         <div class="headline">
             <div class="container">
                 <h1>Solving a Project-Problem Statement</h1>
-                <h2>Will Knock Your Socks Off</h2>
+               
             </div>
         </div>
     </header>

@@ -23,6 +23,22 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+       <style type="text/css">
+              
+    body {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: none;
+}
+
+html {
+  background: url(<?=asset("img/after5.jpg")?>) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+          </style>  
 
 </head>
 
@@ -39,13 +55,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">MT</a>
+                <a class="navbar-brand" href="/">MT</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navcore">
                 <ul class="nav navbar-nav">
-                    <li style="margin-top:15px;">
-                     WELCOME   {{ Auth::user()->name }}
+                    <li >
+                    <a href="/afterlogin" > WELCOME   {{ Auth::user()->name }} </a>
                     </li>
                     <li>
                         <a href="mysubmissions">My submissions</a>
@@ -61,11 +77,11 @@
                 <ul class="nav navbar-nav navbar-right">
                      <li><a href="/forum" >Discussion Forum</a>  </li>
                     <li><a href="/postaquestion" >Post a Question </a>  </li>
-                        <li><a href="#"><img src="img/notify.png" style="width:50px;" /></a></li> 
+                        <li><a href="#"><img src="img/notify.png" style="width:30px;" /></a></li> 
                         <li>
                         <div class="dropdown">
                             <a   class=" dropdown-toggle"   data-toggle="dropdown" >
-                                <img style="margin-top:15px;width:50px;" id="profile" class="img-circle" src="img/businessman.png" />
+                                <img style="margin-top:15px;width:30px;" id="profile" class="img-circle" src="img/businessman.png" />
                             </a> 
                             <ul class="dropdown-menu">
                                 
@@ -84,13 +100,13 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" style="color:white;">
 
         <!-- Page Heading -->
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Hi! {{ Auth::user()->name }}
-                    <small>here are your Submissions</small>
+                    <small style="color:white;">here are your Submissions</small>
                 </h1>
             </div>
         </div>
@@ -224,11 +240,11 @@
             <div class="row">
                 <div class="col-lg-12">
                       <h3>We give rating out of 5 for your progress as follows</h3>
-                      <button type="button" class="btn btn-success">Success 5</button>                      
-                      <button type="button" class="btn btn-primary">Primary 4</button>
-                      <button type="button" class="btn btn-default">Default 2-3</button>
-                      <button type="button" class="btn btn-warning">Warning 1</button>
-                      <button type="button" class="btn btn-danger">Danger 0</button>
+                      <button type="button" class="btn btn-success">5</button>                      
+                      <button type="button" class="btn btn-primary">4</button>
+                      <button type="button" class="btn btn-default">2-3</button>
+                      <button type="button" class="btn btn-warning">1</button>
+                      <button type="button" class="btn btn-danger">0</button>
                     
                 </div>
             </div>
