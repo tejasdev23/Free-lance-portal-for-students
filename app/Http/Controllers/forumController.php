@@ -54,6 +54,7 @@ public function viewPost($slug)
 try
 {	$replies=replies::orderBy('created_at','desc')->get();
 	$question=questions::where('slug','=',$slug)->first();
+	$repu=replies::all();
 	if($question!=null)
 	{
 	return view('replies',compact('question','replies'));

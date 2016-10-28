@@ -1,5 +1,5 @@
-  <!-- Navigation -->
-    <nav class="navbar navbar-fixed-top" role="navigation" style="background: black;">
+ <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -14,10 +14,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navcore">
                 <ul class="nav navbar-nav">
-                    <li >
-                  
-                    WELCOME   {{ Auth::user()->name }} 
-
+                    <li style="margin-top:15px; color:white;">
+                     WELCOME   {{ Auth::user()->name }}
                     </li>
                     <li>
                         <a href="mysubmissions">My submissions</a>
@@ -33,11 +31,11 @@
                 <ul class="nav navbar-nav navbar-right">
                      <li><a href="/forum" >Discussion Forum</a>  </li>
                     <li><a href="/postaquestion" >Post a Question </a>  </li>
-                        <li><a href="#"><img src=<?= asset("img/notify.png") ?> style="width:50px;" /></a></li> 
+                        <li><a href="#"><img src="img/notify.png" style="width:50px;" /></a></li> 
                         <li>
                         <div class="dropdown">
                             <a   class=" dropdown-toggle"   data-toggle="dropdown" >
-                                <img style="margin-top:15px;width:50px;" id="profile" class="img-circle" src=<?=asset("img/businessman.png") ?>  />
+                                <img style="margin-top:15px;width:50px;" id="profile" class="img-circle" src="img/businessman.png" />
                             </a> 
                             <ul class="dropdown-menu">
                                 

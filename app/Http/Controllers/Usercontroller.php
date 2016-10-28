@@ -39,6 +39,10 @@ class Usercontroller extends Controller
         Auth::logout();
         return Redirect::to('index');
     }
+   public function retproj()
+   {
+   	return view('projectstheme1');
+   }
 
 
 

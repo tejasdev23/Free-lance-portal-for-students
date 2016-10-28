@@ -16,8 +16,13 @@
 
    <style type="text/css">
               
+               body {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: none;
+}
               html { 
-  background: url("img/try3.png") no-repeat center center fixed; 
+  background: url("img/after1.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -348,7 +353,7 @@
 
             </div>
             <div class="col-md-4 ">
-                <md-card>
+                
                <div class="container">
                     <div class="row">
                         <div class="col-md-4  form-box">
@@ -363,7 +368,7 @@
                             </div>
                             <div class="form-bottom contact-form">
                                
-                                <form role="form" action="mailsend" method="POST">
+                                <form role="form" action="" method="POST">
                                 {{csrf_field()}}
                                     <div class="form-group">
                                         <label class="sr-only" for="contact-email">Email</label>
@@ -384,7 +389,7 @@
                         </div>
                     </div>
                 </div>
-                </md-card>
+               
             </div>
         </div>
         

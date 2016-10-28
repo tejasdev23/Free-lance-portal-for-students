@@ -14,12 +14,6 @@
   <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet"> -->
  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
-
-        
-          
-
-
     <link href=<?= asset("css/bootstrap.min.css") ?> rel="stylesheet">
     
 
@@ -36,7 +30,22 @@
         <script src='js/angular-material.min.js'></script>
        
 
-    
+<style type="text/css">
+              
+    body {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: none;
+}
+
+html {
+  background: url("img/post.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+          </style>    
 
 
 </head>
@@ -44,7 +53,7 @@
 <body ng-app="loginapp">  
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -101,46 +110,58 @@
     <br>
     <br>
     <!-- Full Width Image Header -->
-    
-        <div class="jumbotron">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <div >
             <div class="container" style="margin-right:150px;" >
             <div class="col-lg-3 col-lg-offset-1">
             <a href="mysubmissions"><img class="img-circle img-responsive " src="img/submissions.png">
             </a>
-            <p style="text-align: center;">My submissions</p>
+            <h2><p style="text-align: center;color:white;">My submissions</p></h2>
             </div>
 
             <div class="col-lg-3 col-lg-offset-1">
             <a href="givechallenge"><img class="img-circle img-responsive " src="img/solve.png"> </a>
-             <p style="text-align: center;">Give a challenge</p>
+           <h2>  <p style="text-align: center;color:white;">Give a challenge</p> </h2>
             </div>
 
             <div class=" col-lg-3 col-lg-offset-1">
             <a href="startprojects"><img  class="img-circle img-responsive" src="img/givechallenge.png"></a>
-             <p style="text-align: center;">Start a Project</p>
+             <h2> <p style="text-align: center;color:white;">Start a Project</p></h2>
             </div>
             </div>
         </div>
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
         <div class="container">
 
-        <h1>Popular projects</h1>
+        <h1 style="color:white;">Popular projects</h1>
 
         <!-- Projects Row -->
         <div class="row">
       <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front"  style=" background: url(http://placehold.it/750x450) center no-repeat;">
+    <div class="front"  style=" background: url(img/cake.png) center no-repeat;">
      <!-- <span class="name">David Walsh</span>-->
 
     </div>
-    <div class="back" style="background: url(img/cake.png) center no-repeat;">
-      
+    <div class="back" style=" background: url(img/FLIGHT.png) center no-repeat;" >
+     <br>
+     <br>
+     <br>
+
      
-      <p></p>
+      <h1><a href="projectstheme1"><p style="text-align:center;">Read more</p> </a></h1>
     </div>
   </div>
 </div>
@@ -152,7 +173,7 @@
    <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front"  style=" background: url(http://placehold.it/750x450) center no-repeat;">
+    <div class="front"  style=" background: url(img/FLIGHT.png) center no-repeat;">
      <!-- <span class="name">David Walsh</span>-->
 
     </div>

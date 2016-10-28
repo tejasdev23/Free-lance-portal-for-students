@@ -19,6 +19,23 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+
+        <style type="text/css">
+              
+    body {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: none;
+}
+
+html {
+  background: url("img/after5.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+          </style>  
 </head>
 <body>
     <div id="app">

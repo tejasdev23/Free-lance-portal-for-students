@@ -40,7 +40,7 @@ Route::get('/',['as' => 'home','uses' => 'Usercontroller@index']);
 Route::get('/index','Usercontroller@index');
 
 
-Route::post('/mailsend','mailController@mailsend');
+Route::post('/mailsend','mailController@contactus');
 
 Route::get('/afterlogin','Usercontroller@afterlogin');
 
@@ -56,11 +56,7 @@ Route::get('/givechallenge','Usercontroller@givechallenge');
 Route::post('/pushformdata','Probscontroller@pushformdata');
 
 
-Route::get('/projectstheme1',function()
-{
-
-	return view('projectstheme1');
-});
+Route::get('/projectstheme1','Usercontroller@retproj');
 
 Route::get('/project1',function(){
 
