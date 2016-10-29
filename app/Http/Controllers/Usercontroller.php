@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Session;
@@ -7,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Auth;
 use Mail;
-use \Storage;
+use Storage;
 
 class Usercontroller extends Controller
 {
@@ -46,14 +45,61 @@ class Usercontroller extends Controller
    }
    public function uploadprojects(Request $request)
    {
-   		  if($request->hasFile('file'))
+   		  $name=Auth::user()->name;
+        $email=Auth::user()->email;
+            
+              
+                if($request->hasFile('file'))
    		  {
 			$file=$request->file('file');
+			
 			$filename=$file->getClientOriginalName();   	
-			$destinationPath=config('app.fileDestinationPath').'/'/$filename;
-			$uploaded=$storage::put($destinationPath,file_get_contents($file->getRealPath()))	  	
-   		  }
+			echo $filename;
+		//	$destinationPath='public/'.$filename;
+			
+			$extension=$file->getClientOriginalExtension();
+			echo $extension;
+			echo "hello     ";
+			$destinationPath=$filename;
+
+			echo $destinationPath;
+		//	echo $destinationPath;
+		$uploaded=Storage::put($destinationPath,file_get_contents($file->getRealPath()));
+			 
+			
+		if($uploaded)
+			{
+					
+				  Mail::send('emails.upload', ['name' => $name,'email'=>$email,'filename'=>$filename], function ($message) use ($destinationPath,$filename) 
+        {
+        	
+        
+            $message->from('tejasnareshpatel23@gmail.com', 'Tejas Patel');
+
+            $message->to('tejasnareshpatel23@gmail.com');
+           // $path = realpath($destinationPath);
+             $message->attach(storage_path('app/'.$filename));
+    		
+			}); 	
+   		 }
+   		   
+               
+    
+
+      
+        
+          $msg="We will get back to you soon";
+          Session::flash('success', $msg);
+          
+          return Redirect::to('/index');
+	
    }
+   else
+   {
+   	echo "hello";
+   }
+}
+
    
 
 

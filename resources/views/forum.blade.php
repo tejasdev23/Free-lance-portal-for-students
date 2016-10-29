@@ -38,7 +38,7 @@
 }
 
 html {
-  background: url("img/forum.jpg") no-repeat center center fixed; 
+  background: url("img/aww.png") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -128,7 +128,9 @@ html {
 
 <?php 
 
-$colors=['#375064','#00D283','#F36247','#F1901B','#F9CC01','#42CCC9','#4FA3D2','#4874A8','#595386','#5C426E'];
+$colors=['white','#01579B','#0277BD','#0288D1','#039BE5','#03A9F4','#29B6F6','#4FC3F7','#81D4FA','#B3E5FC
+','#E1F5FE'];
+//$colors=['#2196F3'];
 $index=0;
 ?>
 @forelse($questions as $question)
@@ -138,12 +140,28 @@ $index=0;
 <p>{{$question->description}}</p>
 </md-card>
 </div>-->
+@if($index==0)
 
-<md-card style="margin: 5px;background-color:{{$colors[$index]}};color:white; ">
-<?php $index=($index+1)%5; ?>
+<md-card style="margin: 0px;background-color:{{$colors[$index]}};color:black; ">
+
+@else
+
+<md-card style="margin: 0px;background-color:{{$colors[$index]}};color:white; ">
+
+
+@endif
+<?php $index=($index+1)%10; ?>
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline"><a style="color:white;" href="/forum/question/{{$question->slug}}" >{{$question->question}} </a></span>
+            <span class="md-headline">
+
+            @if(($index-1)==0)
+            <a style="color:black;" href="/forum/question/{{$question->slug}}" >{{$question->question}} </a></span>
+
+            @else
+            <a style="color:white;" href="/forum/question/{{$question->slug}}" >{{$question->question}} </a></span>
+
+            @endif
             <p class="text-right">By: {{$question->user->name}}</p>
             <p>{{$question->description}}</p>
           </md-card-title-text> 
@@ -152,9 +170,9 @@ $index=0;
         	<i class="glyphicon glyphicon-calendar"></i>{{$question->created_at->diffforHumans()}}
         	@if($question->replies->count() > 0)
 					 
-					 <li><md-button class='md-raised md-primary md-hue-0.2' href="/forum/question/{{$question->slug}}" >{{ $question->replies->count() }} comment(s) </md-button></li>
+					 <li><md-button class='md-raised md-accent md-hue-0.2' href="/forum/question/{{$question->slug}}" >{{ $question->replies->count() }} comment(s) </md-button></li>
 				@else
-					<li><md-button  class='md-raised md-primary md-hue-0.2' href="/forum/question/{{$question->slug}}" >Be the first one to reply </md-button></li>
+					<li><md-button  class='md-raised md-accent md-hue-0.2' href="/forum/question/{{$question->slug}}" >Be the first one to reply </md-button></li>
 				@endif
         </md-card-actions>
       </md-card> 

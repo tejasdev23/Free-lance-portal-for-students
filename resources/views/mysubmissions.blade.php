@@ -200,10 +200,9 @@
         </div>
                 <md-card class="col-md-4">
                 <md-card-header>Contact Us</md-card-header>
-<form name="submitForm"  action="upload" method="POST">
+<form name="submitForm"  action="upload" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
  {{ csrf_field() }}
  
-
            
         <md-input-container >
           <label>{{Auth::user()->name}}</label>

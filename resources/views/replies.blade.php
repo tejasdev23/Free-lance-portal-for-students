@@ -78,7 +78,7 @@ html {
 <div class="container">
 
  <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: white;">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -93,8 +93,8 @@ html {
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navcore">
                 <ul class="nav navbar-nav">
-                    <li style="margin-top:15px; color:white;">
-                     WELCOME   {{ Auth::user()->name }}
+                    <li >
+                    <a href="" >WELCOME   {{ Auth::user()->name }} </a>
                     </li>
                     <li>
                         <a href="mysubmissions">My submissions</a>
@@ -110,11 +110,11 @@ html {
                 <ul class="nav navbar-nav navbar-right">
                      <li><a href="/forum" >Discussion Forum</a>  </li>
                     <li><a href="/postaquestion" >Post a Question </a>  </li>
-                        <li><a href="#"><img src=<?=asset("img/notify.png") ?> style="width:50px;" /></a></li> 
+                        <li><a href="#"><img src=<?=asset("img/notify.png") ?> style="width:30px;" /></a></li> 
                         <li>
                         <div class="dropdown">
                             <a   class=" dropdown-toggle"   data-toggle="dropdown" >
-                                <img style="margin-top:15px;width:50px;" id="profile" class="img-circle" src=<?=asset("img/businessman.png") ?> />
+                                <img style="margin-top:15px;width:30px;" id="profile" class="img-circle" src=<?=asset("img/businessman.png") ?> />
                             </a> 
                             <ul class="dropdown-menu">
                                 
@@ -151,10 +151,18 @@ html {
 	</div>
 </div>
 -->
-<md-card>
+
+
+<?php 
+
+$colors=['#006064','#00838F','#0097A7','#00ACC1','#00BCD4','#26C6DA','#4DD0E1','#80DEEA','#B2EBF2','#E0F7FA'];
+//$colors=['#2196F3'];
+$index=0;
+?>
+<md-card style="margin:0px;">
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline"><a href="/forum/question/{{$question->slug}}" >{{$question->question}} </a></span>
+            <span class="md-headline" ><a style="color:black" href="/forum/question/{{$question->slug}}" >{{$question->question}} </a></span>
             <p class="text-right">By: {{$question->user->name}}</p>
             <p>{{$question->description}}</p>
           </md-card-title-text>
@@ -166,23 +174,9 @@ html {
         </md-card-actions>
       </md-card> 
 @forelse($replies->where('questions_id','=',$question->id) as $reply)
-<!--<div class="well col-sm-10 push-right">
-		<div class="media">
-		<div class="media-body">
-			
-	
-			<p>{{$reply->body}}</p>
-			<p class="text-right">BY: {{$reply->user->name}}</p>
-			<ul class="list-inline list-unstyled">
-				<li><i class="glyphicon glyphicon-calendar"></i>{{$reply->created_at->diffforHumans()}}</li>
-				<li> </li>
-			</ul>
-		</div>
-	</div>
 
-</div>-->
-
-<md-card style="height:80px;">
+<md-card  style="margin:0px;background-color:{{$colors[$index]}};color:white; ">
+<?php $index=($index+1)%10; ?>
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">{{$reply->body}} </span>
@@ -200,13 +194,16 @@ html {
 @empty
 
 @endforelse
+
+<br>
 <form class="col-sm-12" name="replyform" method="POST" action="http://localhost:8000/forum/question/saveReply">
 
 <input type="text" class="form-control" name="comment" placeholder="Reply">
 {{ csrf_field() }}
+
 <input type="hidden" class="form-control" name="slug" value="{{ $question->slug }}" >
 <br>                 
-<input type="submit" class="btn" >
+<input type="submit" class="btn " value="send" >
 
 </form>
 
