@@ -22,16 +22,16 @@
 */
 
 use Illuminate\Http\Request;
-Route::post('forum/question/saveReply','forumController@saveReply');
-Route::get('/newindex',function()
-{
-	return view('newindex');
-});
+Route::post('/forum/question/saveReply','forumController@saveReply');
 
+Route::post('contact','HomeController@sendemail');
 Route::get('/postaquestion','postController@page');
 Route::get('/forum','forumController@home');
 Route::post('/postthat','postController@enterdata');
 
+Route::post('upload','Usercontroller@uploadprojects');
+
+Route::post('/postthatt','postController@enterdata');
 Route::get('/forum/question/{slug}','forumController@viewPost');
 Route::post('/put','Usercontroller@putdata');
 

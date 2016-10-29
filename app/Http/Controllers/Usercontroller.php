@@ -6,7 +6,8 @@ use Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Auth;
-
+use Mail;
+use \Storage;
 
 class Usercontroller extends Controller
 {
@@ -43,6 +44,17 @@ class Usercontroller extends Controller
    {
    	return view('projectstheme1');
    }
+   public function uploadprojects(Request $request)
+   {
+   		  if($request->hasFile('file'))
+   		  {
+			$file=$request->file('file');
+			$filename=$file->getClientOriginalName();   	
+			$destinationPath=config('app.fileDestinationPath').'/'/$filename;
+			$uploaded=$storage::put($destinationPath,file_get_contents($file->getRealPath()))	  	
+   		  }
+   }
+   
 
 
 

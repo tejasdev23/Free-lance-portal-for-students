@@ -200,11 +200,11 @@ html {
 @empty
 
 @endforelse
-<form class="col-sm-10" name="replyform" method="POST" action="http://localhost:8000/forum/question/saveReply">
+<form class="col-sm-12" name="replyform" method="POST" action="http://localhost:8000/forum/question/saveReply">
 
 <input type="text" class="form-control" name="comment" placeholder="Reply">
 {{ csrf_field() }}
-<input type="hidden" class="form-control" name="slug" value={{$question->slug}} >
+<input type="hidden" class="form-control" name="slug" value="{{ $question->slug }}" >
 <br>                 
 <input type="submit" class="btn" >
 

@@ -28,11 +28,20 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
+.carousel-content {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  z-index: 20;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
           </style>
         
           
 
-    <link href="https://webtechnology-laravel.herokuapp.com/css/bootstrap.min.css" rel="stylesheet">
+    <link href=<?= asset("css/bootstrap.min.css") ?> rel="stylesheet">
 
     <link href=<?= asset("css/mystyles.css") ?> rel="stylesheet">
        <!-- jQuery -->
@@ -60,6 +69,19 @@
 
 
 </head>
+
+    @if(Session::has('success'))
+    
+     
+    <div class="alert alert-success">{{ Session::get('success') }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+    
+    @endif
+    @if(Session::has('failure'))
+    
+      <div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      {{ Session::get('failure') }}</div>
+    
+    @endif
 <body ng-app="MyApp" >
 
 
@@ -76,6 +98,7 @@
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img src="img/cover2.jpg" alt="Chania">
+      <div class="carousel-content" style="position: absolute;top:220px;left:350px;"><h1>Some problem statement related stuff</h1></div>
     </div>
 
     <div class="item">
@@ -83,11 +106,13 @@
     </div>
 
     <div class="item">
-      <img src="img/cover4.jpg" alt="Flower">
+      <img src="img/cover4.jpg" alt="Bugathon">
+       <div class="carousel-content" style="position: absolute;top:220px;left:350px; color: black;"><h1>BUGathon</h1></div>
     </div>
 
     <div class="item">
-      <img src="img/captain.jpeg" alt="Flower">
+      <img src="img/captain.jpeg" alt="Defence">
+       <div class="carousel-content" style="position: absolute;top:310px;left:380px;"><h1 style="color:white;"><span style="color:black" >C</span>an you build a system as secure as captain america's &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shield</h1></div
     </div>
   </div>
 
@@ -200,10 +225,10 @@
          <md-card-header>
                 <md-card-header-text md-theme="altTheme">
                     <span class="md-title">Android and Web Applications</span>
-                    <span class="md-subhead">thoda sa description</span>
+                    <span class="md-subhead">Barclay's</span>
                 </md-card-header-text>
         </md-card-header>
-            <img ng-src="img/cake.png" class="md-card-image" >
+            <img ng-src="img/webdroid.jpg" style="height:200px;"  class="md-card-image" >
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline"></span>
@@ -226,10 +251,10 @@
            <md-card-header>
                 <md-card-header-text>
                     <span class="md-title">Cloud Computing</span>
-                    <span class="md-subhead">thoda sa description</span>
+                    <span class="md-subhead">Digital Ocean</span>
                 </md-card-header-text>
         </md-card-header>
-            <img ng-src="img/cabin.png" class="md-card-image" >
+            <img ng-src="img/cloud.jpg" style="height:200px;" class="md-card-image" >
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline"></span>
@@ -243,7 +268,7 @@
                 </p>
               
                 </md-card-content>
-                  <md-button data-toggle="modal" data-target="#project2">More</md-button>
+                  <md-button ng-disabled="true">Coming soon</md-button>
 
         </md-card>
 </div>
@@ -254,10 +279,11 @@
                <md-card-header>
                 <md-card-header-text>
                     <span class="md-title">Internet Of Things</span>
-                    <span class="md-subhead">thoda sa description</span>
+                    <span class="md-subhead">IBM</span>
+
                 </md-card-header-text>
         </md-card-header>
-            <img ng-src="img/game.png" class="md-card-image" >
+            <img ng-src="img/iot.jpg" style="height:200px;" class="md-card-image" >
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline"></span>
@@ -271,7 +297,7 @@
                 </p>
                
                 </md-card-content>
-                 <md-button data-toggle="modal" data-target="#project3">More</md-button>
+                 <md-button ng-disabled="true">Coming soon</md-button>
         </md-card>
 </div>
 
@@ -299,10 +325,7 @@
         </div>
         -->
         
-        
-     
-        
-
+      
         <hr class="featurette-divider" id="contactus">
         <md-card>
     <md-card-content>
@@ -330,11 +353,11 @@
                 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBkdJGwpF3awohXCT4I7NvJhGxQS32KnL8'></script>
                 <div style='overflow:hidden;width:800px;height:475px' >
                     <a href='https://addmap.net/'>map generator</a> 
-                    <md-card>
-                <div id='gmap_canvas'  style='border-radius: 100px;width:800px;height:475px'>
+                    
+                <div id='gmap_canvas'  style='width:780px;height:430px'>
                     
                 </div>
-                </md-card>
+                
                     <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
                 </div> 
 
@@ -355,38 +378,49 @@
             <div class="col-md-4 ">
                 
                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4  form-box">
-                            <div class="form-top">
-                                <div class="form-top-left">
-                                    <h3>Contact us</h3>
-                                    <p>Fill in the form below to send us a message:</p>
-                                </div>
-                                <div class="form-top-right">
-                                    <i class="fa fa-envelope"></i>
-                                </div>
-                            </div>
-                            <div class="form-bottom contact-form">
-                               
-                                <form role="form" action="" method="POST">
-                                {{csrf_field()}}
-                                    <div class="form-group">
-                                        <label class="sr-only" for="contact-email">Email</label>
-                                        <input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="contact-subject">Subject</label>
-                                        <input type="text" name="subject" placeholder="Subject..." class="contact-subject form-control" id="contact-subject">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="contact-message">Message</label>
-                                        <textarea name="message" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn">Send message</button>
-                                </form>
-                               
-                            </div>
-                        </div>
+                <md-card class="col-md-3">
+                <md-card-header>Contact Us</md-card-header>
+<form name="projectForm"  action="contact" method="POST">
+ {{ csrf_field() }}
+ 
+
+           
+        <md-input-container >
+          <label>Name</label>
+          <input md-maxlength="20" required name="name" ng-model="project.clientName">
+          <div ng-messages="projectForm.clientName.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+
+      
+
+       <md-input-container class="md-block">
+        <label>Email</label>
+        <input required type="email" name="email" ng-model="project.clientEmail"
+               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+
+        <div ng-messages="projectForm.clientEmail.$error" role="alert">
+          <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+            Your email must be between 10 and 100 characters long and look like an e-mail address.
+          </div>
+        </div>
+      </md-input-container>
+
+
+
+        <md-input-container class="md-block">
+          <label>Message</label>
+          <textarea ng-model="user.biography" md-maxlength="150" name="message" rows="5" md-select-on-focus></textarea>
+        </md-input-container>
+         <div>
+        <md-button class="md-accent md-raised md-hue-5" type="submit" >Send</md-button>
+      </div>
+
+
+</form>
+ </md-card>
                     </div>
                 </div>
                
@@ -409,150 +443,6 @@
 </div>
 
     <!-- /.container -->
-
- 
-
-      
-   
-  
-     
-<!-- LOGIN AND SIGNUP MODALS -->
-
-
-<!-- LOGIN MODAL -->
-<div class="modal fade" id="login">
-<div class="modal-dialog">
-
-<div class="modal-content">
-<div class="modal-header">
-<button class="close" data-dismiss="modal">&times;</button>
-<!-- LOGIN -->
-</div>
-<div class="modal-body"></div>
-
-<h1 style="text-align:center;">Log in</h1><br>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <form method="POST" action="checklogin.php">
-      <label >Email</label>
-      <input class="form-control"  type="email" name="user_email"  />
-
-      <label >Password</label>
-      <input class="form-control" type="password" name="user_password" />
-      <br>
-      <div style="text-align:center" >
-       <input type="submit" name="commit" value="Log in " class="btn btn-primary" />
-        </div>
-</form>
-<br>
-<div style="font-family: 'Open Sans', sans-serif;" ></div>
-
-   <button class=" btn btn-block btn-default btnmodal" >
-                    <img src="img/face.png" alt="Facebook icon" title="Facebook icon">
-                    SIGN IN WITH FACEBOOK
-                </button>
-                
-                <br>
-                    <button class=" btn btn-block  btn-default btnmodal">
-                    <img src="img/google-plus.png" alt="Facebook icon" title="Facebook icon">
-                    SIGN IN WITH GOOGLE
-                </button>
-                </div>
-
-  </div>
-
-
-<div class="modal-footer">
-    <button class="btn btn-danger" data-dismiss="modal">CLOSE</button>
-</div>
-</div>
-</div>
-</div>
-
- <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-<!--Signup modla -->
-
-<div class="modal fade" id="signup">
-<div class="modal-dialog">
-
-<div class="modal-content">
-<div class="modal-header">
-<button class="close" data-dismiss="modal">&times;</button>
-<!-- SIGN UP -->
-</div>
-<div class="modal-body">
-<h1 style="text-align:center;">Sign Up </h1><br>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <form method="POST" action="register.php"   >
-        
-        
-    <label for="user_name">Name</label>
-    <input name="user_name" class="form-control" type="text" />
-      <label for="user_email">Email</label>
-      <input name="user_email" class="form-control" type="email"  />
-
-      <label for="user_password">Password</label>
-      <input  name="user_password" class="form-control" type="password" />
-      <br>
-          <label for="user_repassword">Confirm Password</label>
-      <input  name="user_repassword" class="form-control" type="password" />
-        <br>
-      <label for="user_dob">DOB</label>
-      <input name="user_dob" class="form-control" type="date" />
-       <br>
-      <label for="user_phone">PHONE NO</label>
-      <input name="user_phone" class="form-control" type="number" />
-       <br>
-       
-      <div style="text-align:center;"> <input type="submit" name="commit" value="Create my account" class="btn btn-primary" > </div>
-      <br>
-
-      
-</form>
-<div style="font-family: 'Open Sans', sans-serif;
-font-family: 'Raleway', sans-serif;">
-   <button  class=" btn btn-block btn-default btnmodal" >
-                    <img src="img/face.png" alt="Facebook icon" title="Facebook icon">
-                    SIGN UP WITH FACEBOOK
-                </button>
-                
-                <br>
-                    <button class=" btn btn-block  btn-default btnmodal">
-                    <img src="img/google-plus.png" alt="Google icon" title="Google icon">
-                    SIGN UP WITH GOOGLE              </button>
-                </div>    
-                <br>
-                <p>Already have an account? <button  data-toggle="modal" class="btn btn-primary" data-target="#login" data-dismiss="modal">Login now!</button></p>
-  </div>
-</div>
-</div>
-
-<div class="modal-footer">
-    <button class="btn btn-danger" data-dismiss="modal">CLOSE</button>
-
-</div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
 <!-- project1 -->
 <div class="project-modal modal fade" id="project1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -655,4 +545,4 @@ font-family: 'Raleway', sans-serif;">
 
 
 
-
+    

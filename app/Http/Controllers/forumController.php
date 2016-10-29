@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use Auth;
+use App\User;
 
 class forumController extends Controller
 {
@@ -29,9 +30,13 @@ public function saveReply(Request $request)
 	//print_r($formdata);
 	$comment=$formdata['comment'];
 	$slugdata=$formdata['slug'];
+	echo $slugdata;
+	
+	
 	$reply=new replies();
 	$reply->user_id=Auth::user()->id;
 	$reply->questions_id=questions::where('slug','=',$slugdata)->value('id');
+
 	$reply->body=$comment;
 	$reply->save();
 	$replies=replies::orderBy('created_at','desc')->get();

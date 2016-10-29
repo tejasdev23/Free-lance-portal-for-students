@@ -12,6 +12,7 @@ use App\categories;
 use App\Http\Requests\CreatePostRequest;
 use Auth;
 
+
 class postController extends Controller
 {
 	
@@ -28,16 +29,15 @@ echo "hit here";
 	$question=$formdata['question'];
 	
 
-	$name=$formdata['name'];
-	$email=$formdata['email'];
+	
 	$type=$formdata['type'];
 	$desc=$formdata['description'];
 
 	$questions=new questions();
 	$questions->question = $question;
-	$questions->Username = $name;
+	$questions->Username = Auth::user()->name;
 	$questions->Type = $type;
-	$questions->email = $email;
+	$questions->email = Auth::user()->email;
 	$questions->description = $desc;
 	$questions->user_id =Auth::user()->id;
 	$questions->slug=$question;

@@ -38,7 +38,7 @@
 }
 
 html {
-  background: url("img/backe1.jpg") no-repeat center center fixed; 
+  background: url("img/forum.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -67,7 +67,9 @@ html {
 
 <div class="container">
  <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: white;">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -77,13 +79,13 @@ html {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">MT</a>
+                <a class="navbar-brand" href="/">MT</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navcore">
                 <ul class="nav navbar-nav">
                     <li >
-                    <a href="/afterlogin">WELCOME   {{ Auth::user()->name }} </a>
+                    <a href="/afterlogin" > WELCOME   {{ Auth::user()->name }} </a>
                     </li>
                     <li>
                         <a href="mysubmissions">My submissions</a>
@@ -93,7 +95,7 @@ html {
                         <a href="givechallenge">Give a Challenge</a>
                     </li>
                     <li>
-                        <a href="projectstheme1">Solve a Challenge</a>
+                        <a href="startprojects">Solve a Challenge</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -124,6 +126,11 @@ html {
 <br>
 <br>
 
+<?php 
+
+$colors=['#375064','#00D283','#F36247','#F1901B','#F9CC01','#42CCC9','#4FA3D2','#4874A8','#595386','#5C426E'];
+$index=0;
+?>
 @forelse($questions as $question)
 <!--<div class="jumbotron">
 <md-card style="background-color: #342453; color:white;">
@@ -132,15 +139,14 @@ html {
 </md-card>
 </div>-->
 
-<md-card>
+<md-card style="margin: 5px;background-color:{{$colors[$index]}};color:white; ">
+<?php $index=($index+1)%5; ?>
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline"><a href="/forum/question/{{$question->slug}}" >{{$question->question}} </a></span>
+            <span class="md-headline"><a style="color:white;" href="/forum/question/{{$question->slug}}" >{{$question->question}} </a></span>
             <p class="text-right">By: {{$question->user->name}}</p>
             <p>{{$question->description}}</p>
-          </md-card-title-text>
-          
-         
+          </md-card-title-text> 
         </md-card-title>
         <md-card-actions layout="row" layout-align="end center">
         	<i class="glyphicon glyphicon-calendar"></i>{{$question->created_at->diffforHumans()}}
@@ -150,12 +156,10 @@ html {
 				@else
 					<li><md-button  class='md-raised md-primary md-hue-0.2' href="/forum/question/{{$question->slug}}" >Be the first one to reply </md-button></li>
 				@endif
-         
         </md-card-actions>
       </md-card> 
 @empty
 	<p> No posts found</p>
-
 @endforelse
 
 

@@ -6,6 +6,7 @@ use Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\usergivenprobs;
+use Mail;
 
 class Probscontroller extends Controller
 {
@@ -32,11 +33,26 @@ $prob->Abstract=$request['abstract'];
 $prob->Type=$request['type'];
 $prob->save();
 
-Session::flash('success', 'Save successful');
 
-return Redirect::to('givechallenge');
+		     $name=$request['companyname'];
+        $email=$request['email'];
+        $abstract=$request['abstract'];
+        $type=$request['type'];
+
+          Mail::send('emails.giveprobs', ['name' => $name,'email'=>$email, 'abstract' => $abstract,'type'=>$type], function ($message)
+        {
+
+            $message->from('tejasnareshpatel23@gmail.com', 'Tejas Patel');
+
+            $message->to('tejasnareshpatel23@gmail.com');
+
+        });
+          $msg="We will get back to you soon";
+          Session::flash('success', $msg);
+          return Redirect::to('/givechallenge');
 	
 	}
+
 	
 }
 

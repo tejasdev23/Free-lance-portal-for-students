@@ -1,51 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
-
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <title>HOME</title>
+     <link rel="stylesheet" href=<?= asset('css/angular-material.css') ?> >
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet"> -->
+ <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>My submissions</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+ 
+        
+          
 
-    <!-- Custom CSS -->
-    <link href="css/mysubmissions.css" rel="stylesheet">
+    <link href=<?= asset("css/bootstrap.min.css") ?> rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-       <style type="text/css">
+    <link href=<?= asset("css/mystyles.css") ?> rel="stylesheet">
+       <!-- jQuery -->
+    <script src=<?= asset("js/jquery.js") ?>></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src=<?= asset("js/bootstrap.min.js") ?>></script>
+
+   
+<style type="text/css">
               
-    body {
+               body {
     margin-top: 50px;
     margin-bottom: 50px;
     background: none;
 }
-
-html {
-  background: url(<?=asset("img/after5.jpg")?>) no-repeat center center fixed; 
+              html { 
+  background: url("img/mysub.png") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-          </style>  
+          </style>
+
+
+
+
+   
+
+
+ <script src="js/angular.min.js"></script>
+<script src='js/angular-animate.min.js'></script>
+        <script src='js/angular-aria.min.js'></script>
+        <script src='js/angular-material.min.js'></script>
+     
+       <script src='js/angularinit.js' ></script> 
+         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.20/angular-messages.js"></script>
+
+
 
 </head>
 
-<body>
+<body ng-app="MyApp">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: white;">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -98,73 +118,12 @@ html {
         </div>
         <!-- /.container -->
     </nav>
-
+<br>
+<br>
+<br>
     <!-- Page Content -->
     <div class="container" style="color:white;">
 
-        <!-- Page Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Hi! {{ Auth::user()->name }}
-                    <small style="color:white;">here are your Submissions</small>
-                </h1>
-            </div>
-        </div>
-        <!-- /.row -->
-        
-        <!-- Project One -->
-        <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>Project One</h3>
-                <h4>Difficulty : Difficult</h4>
-                <h4>Type : Android , iOS</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde......</p>
-                <a class="btn btn-primary" href="#">See your progress <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Project Two -->
-        <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>Project Two</h3>
-                <h4>Difficulty : Easy</h4>
-                <h4>Type : Desktop App</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.....</p>
-                <a class="btn btn-success" href="#">See your progress <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Project Three -->
-        <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>Project Three</h3>
-                <h4>Difficulty : Medium</h4>
-                <h4>Type : Full stack development</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus.....</p>
-                <a class="btn btn-danger" href="#">See your progress<span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div>
         <!-- /.row -->
 
         <!-- <hr> -->
@@ -236,19 +195,53 @@ html {
         </div> -->
         <!-- /.row -->
 
-        <hr>
-            <div class="row">
-                <div class="col-lg-12">
-                      <h3>We give rating out of 5 for your progress as follows</h3>
-                      <button type="button" class="btn btn-success">5</button>                      
-                      <button type="button" class="btn btn-primary">4</button>
-                      <button type="button" class="btn btn-default">2-3</button>
-                      <button type="button" class="btn btn-warning">1</button>
-                      <button type="button" class="btn btn-danger">0</button>
-                    
-                </div>
-            </div>
-        <hr>
+        <div class="container">
+        <div class="col-md-4">
+        </div>
+                <md-card class="col-md-4">
+                <md-card-header>Contact Us</md-card-header>
+<form name="submitForm"  action="upload" method="POST">
+ {{ csrf_field() }}
+ 
+
+           
+        <md-input-container >
+          <label>{{Auth::user()->name}}</label>
+          <input  md-no-asterisk disabled required name="name" ng-model="project.clientName">
+          <div ng-messages="projectForm.clientName.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+
+      
+
+       <md-input-container class="md-block">
+        <label>{{Auth::user()->email}}</label>
+        <input required type="email" md-no-asterisk disabled name="email" ng-model="project.clientEmail"
+               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+
+        <div ng-messages="projectForm.clientEmail.$error" role="alert">
+          <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+            Your email must be between 10 and 100 characters long and look like an e-mail address.
+          </div>
+        </div>
+      </md-input-container>
+        <md-input-container>
+        <input type="file" name="file">
+
+        </md-input-container>
+
+
+         <div>
+        <md-button class="md-accent md-raised md-hue-5" type="submit" >Upload your project</md-button>
+      </div>
+
+
+</form>
+ </md-card>
+                    </div>
+
 
         <!-- Footer -->
         <footer>

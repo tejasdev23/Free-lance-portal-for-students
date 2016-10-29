@@ -18,6 +18,7 @@
     
 
     <link href=<?= asset("css/mystyles.css") ?> rel="stylesheet">
+    <link href=<?= asset("css/FLIP.css") ?> rel="stylesheet">
        <!-- jQuery -->
     <script src=<?= asset("js/jquery.js") ?>></script>
 
@@ -53,7 +54,7 @@ html {
 <body ng-app="loginapp">  
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: white;">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -69,7 +70,7 @@ html {
             <div class="collapse navbar-collapse" id="navcore">
                 <ul class="nav navbar-nav">
                     <li >
-                     <a href="/afterlogin">WELCOME   {{ Auth::user()->name }} </a>
+                     <a href="/afterlogin">WELCOME  <?php echo  Auth::user()->name ?></a>
                     </li>
                     <li>
                         <a href="mysubmissions">My submissions</a>
@@ -142,17 +143,48 @@ html {
 <br>
 <br>
 
+    
+
+
+
+
+
         <div class="container">
 
         <h1 style="color:white;">Popular projects</h1>
 
-        <!-- Projects Row -->
+<div  ng-controller="flipCtrl">
+<div ng-repeat="x in projects">
+<div class="col-md-6">
+    <div class="flip " > 
+        <div class="card" ng-class="{'flipped':isFlipped}" ng-click="isFlipped=!isFlipped"> 
+            <div class="face front"> 
+               <img src={{x.details.Image}} width="500px" height="300px"  />
+            </div> 
+            <div class="face back"> 
+                {{x.details.title}}
+                <br>
+                <a href="/startprojects" >more..</a>
+            </div> 
+        </div> 
+    </div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<!--
+      
         <div class="row">
       <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front"  style=" background: url(img/FLIGHT.png) center no-repeat;">
-     <!-- <span class="name">David Walsh</span>-->
+    <div class="front"  >
+    <img src="img/FLIGHT.png" class="img-responsive" style="height: 248px;"/>
+   
 
     </div>
     <div class="back"  >
@@ -173,9 +205,9 @@ html {
    <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front"  style=" background: url(img/flash.jpg) center no-repeat;">
-     <!-- <span class="name">David Walsh</span>-->
+    <div class="front"  >
 
+<img src="img/flash.jpg" class="img-responsive" style="height: 248px;"/>
     </div>
     <div class="back" >
        <br>
@@ -196,9 +228,9 @@ html {
         <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front" style=" background: url(img/after3.png ) center no-repeat;">
-     <!-- <span class="name">David Walsh</span>-->
+    <div class="front" >
 
+<img src="img/after3.png" style="height: 248px;" sclass="img-responsive" />
     </div>
     <div class="back" >
        <br>
@@ -213,15 +245,15 @@ html {
   </div>
 </div>l
             </div>
-         <!-- /.row -->
+         
 
       <p style="color:white">.</p>  <hr >
             <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front" style=" background: url(img/hadoop.png) center no-repeat;">
-     <!-- <span class="name">David Walsh</span>-->
-
+    <div class="front" >
+     
+<img src="img/hadoop.png" style="height: 248px;" class="img-responsive" />
     </div>
     <div class="back" >
       
@@ -241,9 +273,9 @@ html {
     <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front" style=" background: url(img/circus.png) center no-repeat;">
-     <!-- <span class="name">David Walsh</span>-->
-
+    <div class="front" >
+    
+<img src="img/circus.png"  class="img-responsive" />
     </div>
     <div class="back" >
        <br>
@@ -263,9 +295,9 @@ html {
                 <div class="col-md-4 portfolio-item">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   <div class="flipper">
-    <div class="front" style=" background: url(img/submarine.png) center no-repeat;">
-     <!-- <span class="name">David Walsh</span>-->
-
+    <div class="front" >
+     
+<img src="img/submarine.png" class="img-responsive" />
     </div>
     <div class="back" >
       
@@ -281,43 +313,7 @@ html {
 </div>
             </div>
 
-        <!-- Pagination 
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        -->
-        <!-- /.row -->
-
-  
-
-    <!-- Page Content -->
-  
-
-        <!-- Footer -->
+   
         <footer>
             <div class="row">
                 <div class="col-lg-12">
@@ -327,8 +323,8 @@ html {
         </footer>
 </div>
     </div>
+    -->
     
-    <!-- /.container -->
 <script>
 
 var loginapp=angular.module('loginapp',['ngMaterial']).run(function(){
@@ -336,7 +332,13 @@ var loginapp=angular.module('loginapp',['ngMaterial']).run(function(){
                 console.log("thank you DAD");
             });
 
-
+loginapp.controller('flipCtrl', function($scope, $http) {
+    $http.get("apis/projectss.json").then(function(response) {
+        $scope.myData = response.data;
+        console.log($scope.myData.THEME1.projects);
+        $scope.projects=$scope.myData.THEME1.projects;
+    });
+});
 </script>
   
 

@@ -165,7 +165,7 @@ html {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>PROJECT DETAILS</h2> 
+                    <h2 style="color:white;">PROJECT DETAILS</h2> 
                     <hr class="star-primary">
                 </div>
             </div>

@@ -63,8 +63,61 @@
 
 </head>
 <body ng-app="MyApp" ng-hide="false" >
-@include('layouts.partials.navafter')
 
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: white;">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navcore">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">MT</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navcore">
+                <ul class="nav navbar-nav">
+                    <li >
+                    <a href="/afterlogin" > WELCOME   {{ Auth::user()->name }} </a>
+                    </li>
+                    <li>
+                        <a href="mysubmissions">My submissions</a>
+                    </li>
+
+                    <li>
+                        <a href="givechallenge">Give a Challenge</a>
+                    </li>
+                    <li>
+                        <a href="startprojects">Solve a Challenge</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                     <li><a href="/forum" >Discussion Forum</a>  </li>
+                    <li><a href="/postaquestion" >Post a Question </a>  </li>
+                        <li><a href="#"><img src="img/notify.png" style="width:30px;" /></a></li> 
+                        <li>
+                        <div class="dropdown">
+                            <a   class=" dropdown-toggle"   data-toggle="dropdown" >
+                                <img style="margin-top:15px;width:30px;" id="profile" class="img-circle" src="img/businessman.png" />
+                            </a> 
+                            <ul class="dropdown-menu">
+                                
+                                <li><a href="#">Edit profile</a></li>
+                                <li><a href="logout" >Logout</a></li>
+                            </ul>
+
+                        </div>
+                        </li>
+                </ul>
+            </div>
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
 <br>
 <br>
@@ -85,10 +138,11 @@
 
 
 <div ng-app="MyApp" >
-<div layout="row" layout-align="center center">
-<div >
+<div class="col-md-4">
+</div>
+<div layout="row" class=" col-md-4">
 <md-card>
-<form name="projectForm" ng-controller="formCtrl" action="postthat" method="POST">
+<form name="projectForm"  action="postthat" method="POST">
  {{ csrf_field() }}
  <md-input-container class="md-block">
         <label>Title</label>
@@ -101,12 +155,13 @@
 
            <div layout="row">
         <md-input-container flex="50">
-          <label>Name</label>
-          <input md-maxlength="20" required name="name" ng-model="project.clientName">
+          <label>{{Auth::user()->name}}</label>
+          <input disabled type="text"  name="name" ng-model="project.clientName">
           <div ng-messages="projectForm.clientName.$error">
-            <div ng-message="required">This is required.</div>
+           
           </div>
         </md-input-container>
+      
 
         <md-input-container flex="50">
           <label>Project Type</label>
@@ -118,8 +173,8 @@
       </div>
 
        <md-input-container class="md-block">
-        <label>Email</label>
-        <input required type="email" name="email" ng-model="project.clientEmail"
+        <label>{{Auth::user()->email}}</label>
+        <input required disabled="" type="email" name="email" ng-model="project.clientEmail"
                minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
 
 
@@ -144,10 +199,9 @@
 </form>
  </md-card>
  </div>
-</div>
-<script>
 
-   </script>
+     
+
 
 
 

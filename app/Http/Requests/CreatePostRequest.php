@@ -25,9 +25,9 @@ class CreatePostRequest extends FormRequest
     {
         return [
             "question" => "required|max:30",
-            "name" =>"required",
+          
             "type" =>"required",
-            "email"=>"required",
+           
             "description"=>"required"
                 ];
     }

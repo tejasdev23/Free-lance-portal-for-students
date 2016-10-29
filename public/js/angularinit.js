@@ -6,10 +6,10 @@
  MyApp.controller('formCtrl',function($scope)
  {
 
+
 console.log("ho ja bhai rulaega kya");
 
  });
- 
 
   MyApp.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('altTheme').primaryPalette('purple')
