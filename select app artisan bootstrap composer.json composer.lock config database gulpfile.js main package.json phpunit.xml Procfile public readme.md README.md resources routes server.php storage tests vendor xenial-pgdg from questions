@@ -1,0 +1,16 @@
+                     List of relations
+ Schema |         Name          |   Type   |     Owner      
+--------+-----------------------+----------+----------------
+ public | categories            | table    | haymtkuvaknytd
+ public | categories_id_seq     | sequence | haymtkuvaknytd
+ public | migrations            | table    | haymtkuvaknytd
+ public | migrations_id_seq     | sequence | haymtkuvaknytd
+ public | password_resets       | table    | haymtkuvaknytd
+ public | questions             | table    | haymtkuvaknytd
+ public | questions_id_seq      | sequence | haymtkuvaknytd
+ public | usergivenprobs        | table    | haymtkuvaknytd
+ public | usergivenprobs_id_seq | sequence | haymtkuvaknytd
+ public | users                 | table    | haymtkuvaknytd
+ public | users_id_seq          | sequence | haymtkuvaknytd
+(11 rows)
+
