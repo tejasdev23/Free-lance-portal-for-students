@@ -25,7 +25,7 @@ class forumController extends Controller
 public function saveReply(Request $request)
 {
 	//dd("reply to be taken");
-	echo "hit herre";
+
 	$formdata=$request;
 	//print_r($formdata);
 	$comment=$formdata['comment'];
@@ -47,7 +47,7 @@ public function saveReply(Request $request)
 public function home()
 {	
   $questions = questions::orderBy('created_at','desc')->get();
-  echo "<script>console.log('aaya')</script>";
+
 
 
 return view('forum')->with('questions',$questions);

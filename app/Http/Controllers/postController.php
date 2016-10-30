@@ -23,7 +23,7 @@ class postController extends Controller
 	public function enterdata(CreatePostRequest $request)
 	{	
 
-echo "hit here";
+
 
 	$formdata=$request;
 	$question=$formdata['question'];
@@ -42,7 +42,7 @@ echo "hit here";
 	$questions->user_id =Auth::user()->id;
 	$questions->slug=$question;
 	$cat_id=DB::table('categories')->where('name', $type)->value('id');
-	echo $cat_id;
+	
 
 	$questions->category_id=$cat_id;
 	$questions->save();
