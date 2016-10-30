@@ -118,6 +118,16 @@
         </div>
         <!-- /.container -->
     </nav>
+    @if(Session::has('success')) 
+    <div class="alert alert-success">{{ Session::get('success') }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+    
+    @endif
+    @if(Session::has('failure'))
+    
+      <div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      {{ Session::get('failure') }}</div>
+    
+    @endif
 <br>
 <br>
 <br>

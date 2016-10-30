@@ -91,7 +91,7 @@ class Usercontroller extends Controller
           $msg="We will get back to you soon";
           Session::flash('success', $msg);
           
-          return Redirect::to('/index');
+          return Redirect::to('/mysubmissions');
 	
    }
    else
