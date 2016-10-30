@@ -196,7 +196,7 @@ $index=0;
 @endforelse
 
 <br>
-<form class="col-sm-12" name="replyform" method="POST" action="http://localhost:8000/forum/question/saveReply">
+<form class="col-sm-12" name="replyform" method="POST" action="/forum/question/saveReply">
 
 <input type="text" class="form-control" name="comment" placeholder="Reply">
 {{ csrf_field() }}
