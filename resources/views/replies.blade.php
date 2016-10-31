@@ -187,7 +187,7 @@ $index=0;
          
         </md-card-title>
         <md-card-actions layout="row" layout-align="end center">
-        	<i class="glyphicon glyphicon-calendar"></i>{{$question->created_at->diffforHumans()}}
+        	<i class="glyphicon glyphicon-calendar"></i>{{$reply->created_at->diffforHumans()}}
         </md-card-actions>
       </md-card>
        
