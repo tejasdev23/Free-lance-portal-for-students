@@ -86,7 +86,9 @@
 
 
             <!-- Navigation -->
-            <nav class="navbar navbar-fixed-top" role="navigation" style="background-color:#ffffff;">
+         <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: white;">
+    
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -96,22 +98,47 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index">MT</a>
+                <a class="navbar-brand" href="/">MT</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navcore">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#about">About</a>
+                    <li >
+                   <a href="#aboutus" > ABOUT US </a>
                     </li>
                     <li>
-                        <a href="#recent">Recent Projects</a>
+                        <a href="#recent">THEMES</a>
                     </li>
+
                     <li>
-                        <a href="#contactus">Contact Us</a>
+                        <a href="#contactus">CONTACT US</a>
                     </li>
+                   
                 </ul>
-                <ul class="navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                     <li  >
+        
+        
+
+        <md-button class= "md-accent md-raised md-hue-5" style="display:inline-block;height: 10px;"  href="/login"><p style="position:relative;bottom:5px;">LOGIN</p></md-button>
+       
+
+        <md-button  class= "md-accent md-raised md-hue-5" style="display:inline-block;height: 10px;" href="/register"><p style="position:relative;bottom:5px;">SIGN UP</p></md-button>
+        
+        </li>
+                        
+                       
+                </ul>
+            </div>
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+       
+    </nav>
+<!--
+    <ul class="navbar-right">
                 
                 <li  >
         
@@ -124,15 +151,7 @@
         
         </li>
         
-
-                </ul>
-            </div>
-
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
+                </ul> -->
 
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -190,10 +209,14 @@
 
     <!-- Page Content -->
     <div class="container">
+         <hr class="featurette-divider" id="aboutus">
          <md-card>
     <md-card-content>
           
     <!-- First Featurette -->
+
+
+   
 
         <div class="featurette" id="aboutus" >
             <img class="featurette-image img-circle img-responsive pull-right" src="img/aboutus.png" style="width:500px;height:500px">
@@ -218,8 +241,7 @@
         </div> -->
         <!-- Projects Row -->
          <!-- Projects Row -->
-        <h2 class="featurette-heading" id="recent">RECENT PROJECTS
-                <span class="text-muted"></span>
+        <h2 class="featurette-heading" id="recent">THEMES                <span class="text-muted"></span>
             </h2>
             <div class="row">
 <div  class="col-md-4" layout="column">
