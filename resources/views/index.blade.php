@@ -147,8 +147,8 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="img/cover2.jpg" alt="Chania">
-      <div class="carousel-content" style="position: absolute;top:220px;left:350px;"><h1>Some problem statement related stuff</h1></div>
+      <img src="img/cover2.jpg" alt="cover2">
+      <div  style="position: absolute;top:220px;left:350px; background:rgba(255,255,255,0);"><h1>Some problem statement related stuff</h1></div>
     </div>
 
     <div class="item">

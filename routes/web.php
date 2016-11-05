@@ -22,7 +22,10 @@
 */
 
 
-
+Route::get('/captcha',function()
+	{
+		return view('securimage_test');
+	});
 use Illuminate\Http\Request;
 Route::post('/forum/question/saveReply','forumController@saveReply');
 
