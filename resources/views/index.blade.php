@@ -37,6 +37,13 @@
   color: white;
   text-shadow: 0 1px 2px rgba(0,0,0,.6);
 }
+
+.highlight:hover
+{
+/*  background-color:#62C6BA; */
+}
+
+
           </style>
         
           
@@ -103,15 +110,15 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navcore">
                 <ul class="nav navbar-nav">
-                    <li >
-                   <a href="#aboutus" > ABOUT US </a>
+                    <li class="highlight" >
+                   <md-button class= "md-raised  " style="background-color:#536FFE;display:inline-block;height: 10px;"  href="#aboutus"><p style="position:relative;bottom:5px;color:white;">About Us</p></md-button>
                     </li>
-                    <li>
-                        <a href="#recent">THEMES</a>
+                    <li class="highlight">
+           <md-button  class= "md-raised  highlight" style="background-color:#536FFE;display:inline-block;height: 10px;"  href="#recent"><p style="position:relative;bottom:5px;color: white;">THEMES</p></md-button>
                     </li>
 
-                    <li>
-                        <a href="#contactus">CONTACT US</a>
+                    <li class="highlight">
+                      <md-button class= " highlight md-raised md-hue-5" style="background-color:#536FFE;display:inline-block;height: 10px;"  href="#contactus"><p style="color:white;position:relative;bottom:5px;">Contact</p></md-button>
                     </li>
                    
                 </ul>
@@ -123,6 +130,7 @@
 
         <md-button class= "md-accent md-raised md-hue-5" style="display:inline-block;height: 10px;"  href="/login"><p style="position:relative;bottom:5px;">LOGIN</p></md-button>
        
+
 
         <md-button  class= "md-accent md-raised md-hue-5" style="display:inline-block;height: 10px;" href="/register"><p style="position:relative;bottom:5px;">SIGN UP</p></md-button>
         
