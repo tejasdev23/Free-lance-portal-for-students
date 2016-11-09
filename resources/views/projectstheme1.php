@@ -153,6 +153,18 @@ html {
          
 </div>
     </div>
+
+
+            <hr class="featurette-divider"> 
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p style="color:white">Copyright © TP-MGR Productions</p>
+                </div>
+            </div>
+        </footer>
     <!-- /.container -->
        <script>
   

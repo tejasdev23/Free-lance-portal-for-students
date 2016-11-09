@@ -63,7 +63,7 @@
 
 
 
-   
+     
 
 
  <script src=<?=asset("js/angular.min.js") ?>></script>
@@ -87,7 +87,7 @@
       {{ Session::get('failure') }}</div>
     
     @endif
-<body ng-app="MyApp" >
+<body ng-app="MyApp" class="no-print" >
 
 
 
@@ -111,14 +111,14 @@
             <div class="collapse navbar-collapse" id="navcore">
                 <ul class="nav navbar-nav">
                     <li class="highlight" >
-                   <md-button class= "md-raised  " style="background-color:#536FFE;display:inline-block;height: 10px;"  href="#aboutus"><p style="position:relative;bottom:5px;color:white;">About Us</p></md-button>
+                   <md-button class= "md-raised  " style="display:inline-block;height: 10px;"  href="#aboutus"><p style="position:relative;bottom:5px;  ">About Us</p></md-button>
                     </li>
                     <li class="highlight">
-           <md-button  class= "md-raised  highlight" style="background-color:#536FFE;display:inline-block;height: 10px;"  href="#recent"><p style="position:relative;bottom:5px;color: white;">THEMES</p></md-button>
+           <md-button  class= "md-raised  highlight" style="display:inline-block;height: 10px;"  href="#recent"><p style="position:relative;bottom:5px;">THEMES</p></md-button>
                     </li>
 
                     <li class="highlight">
-                      <md-button class= " highlight md-raised md-hue-5" style="background-color:#536FFE;display:inline-block;height: 10px;"  href="#contactus"><p style="color:white;position:relative;bottom:5px;">Contact</p></md-button>
+                      <md-button class= " highlight md-raised md-hue-5" style="display:inline-block;height: 10px;"  href="#contactus"><p style="position:relative;bottom:5px;">Contact</p></md-button>
                     </li>
                    
                 </ul>
@@ -175,16 +175,24 @@
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img src="img/cover2.jpg" alt="cover2">
-      <div  style="position: absolute;top:220px;left:350px; background:rgba(255,255,255,0);"><h1>Some problem statement related stuff</h1></div>
+      <div  style="position: absolute;top:220px;left:270px; background:rgba(255,255,255,0);"><blockquote><h1 style="color: #234234;">Want opportunities to meet the world of projects
+      <br>
+      
+      BINGO! You are at the right place
+      </h1>
+      </blockquote>
+      
+      </div>
     </div>
 
     <div class="item">
-      <img src="img/cover3.png" alt="Chania">
-    </div>
+      <img src="img/cover3.png" alt="parvat">
+      <div class="carousel-content" style="position: absolute;top:460px;left:200px; color: black;"><blockquote><h1 style="color:white ">"What seperates Development from art is that development is meant to be.... _functional_"</h1></blockquote></div>
+      </div>
 
     <div class="item">
       <img src="img/cover4.jpg" alt="Bugathon">
-       <div class="carousel-content" style="position: absolute;top:220px;left:350px; color: black;"><h1>BUGathon</h1></div>
+       <div class="carousel-content" style="position: absolute;top:120px;left:280px; color:#234234;"><blockquote><h1>LET'S TEST YOUR BUG-a-THON SKILLS</h1></blockquote></div>
     </div>
 
     <div class="item">
@@ -227,11 +235,20 @@
    
 
         <div class="featurette" id="aboutus" >
-            <img class="featurette-image img-circle img-responsive pull-right" src="img/aboutus.png" style="width:500px;height:500px">
+            <img class="featurette-image img-circle img-responsive pull-right" src="img/god.jpg" style="width:500px;height:500px">
             <h2 class="featurette-heading">ABOUT US
                 <span class="text-muted"></span>
             </h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p>
+            <h3 style="font-family: TimesNewRoman;">
+Hello!, we both are common people(developers) like you people, waiting eagerly for opportunities and
+wanting  to explore the industry . As we were waiting for opportunities, this idea struck into
+our minds to help people like us. What we believe is internships are not the only way to get
+connected to the companies and get experience about the industries, but getting the habit
+of making projects of industry standards with fresh minds and unrestricted atmosphere is also an awesome alternative. So here is your chance to 
+get connected to the industry by implementing their ideas in the form of projects. CHEERS! 
+</h3>
+</p>
         </div>
            </md-card-content>
  
@@ -269,8 +286,7 @@
           
             <md-card-content>
                 <p>
-            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well..
+            Android development is the most sought after jobs currently and because of hat we have many projects related to android development ,apart from that web applications ..
                 </p>
 
                 </md-card-content>
@@ -295,8 +311,7 @@
            
             <md-card-content>
                 <p>
-            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+           Cloud computing is a type of Internet-based computing that provides shared computer processing resources and data to computers and other devices on demand....
                 </p>
               
                 </md-card-content>
@@ -324,8 +339,7 @@
           
             <md-card-content>
                 <p>
-            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+           The Internet of things (stylised Internet of Things or IoT) is the internetworking of physical devices, vehicles (also referred to as "connected devices" and "smart devices"), buildings and ...
                 </p>
                
                 </md-card-content>
@@ -368,7 +382,25 @@
             <h2 class="featurette-heading">CONTACT US
                 <span class="text-muted"></span>
             </h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead"><b>Get in touch with us</b> 
+<br>
+-To learn, explore and develop
+<br>
+-To have fun with ideas
+<br>
+-To get used with the “BUTTERFLY THEORY”, contact us to know it :p
+<br>
+
+<b>For professional contact</b>
+<br>
+
+LinkedIn : 
+<br>
+TEJAS PATEL :
+<br> <a href="https://www.linkedin.com/in/tejasnareshpatel23">https://www.linkedin.com/in/tejasnareshpatel23</a>
+<br>
+M.G.Rajasekhar :
+<br><a href="https://www.linkedin.com/in/guru-rajasekhar-mynampati-610ba3118"> https://www.linkedin.com/in/guru-rajasekhar-mynampati-610ba3118</a></p>
         </div>
 
        
@@ -473,10 +505,10 @@
 </div>
 
 </div>
-
+</body>
     <!-- /.container -->
 <!-- project1 -->
-<div class="project-modal modal fade" id="project1" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="project-modal modal fade printed" id="project1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -487,10 +519,21 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Theme Title</h2>
+                       <div class="modal-body">
+                            <h2>Android and Web Applications</h2>
                             <hr class="star-primary">
-                            <img src="img/cake.png" class="img-responsive img-centered" alt="">
+                            <img src="img/droid.jpg" width="800px" class="img-responsive img-centered" alt="">
+                           <blockquote>
+                           Android:
+                           "Get your apps ready for the lastest versions with saving battery and memory...
+Now trending : NOUGAT"</blockquote>
+
+
+                           
+                           <blockquote>Website:"websites are the most comprehensive sub system for developing sustainable and gigantic projects"</blockquote>
+
+
+                           
                            
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
@@ -558,8 +601,9 @@
 <script>
 
 
+
 </script>
-</body>
+
 
 
 

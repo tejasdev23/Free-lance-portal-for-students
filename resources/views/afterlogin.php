@@ -319,6 +319,16 @@ html{background:url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JF
 </div>
     </div>
     -->
+            <hr class="featurette-divider"> 
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p style="color:white">Copyright © TP-MGR Productions</p>
+                </div>
+            </div>
+        </footer>
     
 <script>
 

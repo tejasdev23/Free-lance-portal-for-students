@@ -200,6 +200,9 @@ html{background:url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JF
                                 </label><br>
                                 <label style="font-size:20px;color:#00001a;">
                                   <input type="checkbox" value="Web App" name="type" > Web App
+                                </label><br>
+                                <label style="font-size:20px;color:#00001a;">
+                                  <input type="checkbox" value="API" name="type" > API
                                 </label>
                             </div>
                         </div>

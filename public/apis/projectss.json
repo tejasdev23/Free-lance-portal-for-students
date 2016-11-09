@@ -7,7 +7,7 @@
 
         "company":"CREATIVE YOLK STUDIOS",
     	"title" :" ANDROID BLUETOOTH CHAT",
-    	"Image" : "img/FLIGHT.png",
+    	"Image" : "img/creative.jpg",
     	"Description" : "By 2018 European banks will have to give 3rd parties access to their customer data. This new regulation may increase competition, innovation and transparency across the European payments market. The impact will be felt in 2 areas in particular, presenting both opportunities and threats to financial institutions.",
     	"Difficulty level": "hard",
     	"type" : "android"
@@ -17,9 +17,9 @@
 		{"projectid" :2,
   		"details":  {
 
-        "company":"CREATIVE YOLK STUDIOS",
+        "company":"ROBOFISSION LABS",
     	"title" :" API",
-    	"Image" : "img/flash.jpg",
+    	"Image" : "img/robo.jpg",
     	"Description" : "Corporate Treasurers are rebelling against the traditional methods adopted to manage risk. Rather than using historic balance and transactional data from their bankers, they are looking to drive innovation as a result of new European regulations around account aggregators and payments.Large Corporate companies today typically have multiple bank accounts with different banks. Each of these accounts will be accessed via separate banking platforms; some are online, some are offline, and all require time and effort to access/analyse. Accounts are often in multiple currencies and across several geographies and require complex payment instruments to send and receive money. The new regulation will allow corporates to view all of their bank accounts on one platform, enabling treasurers to make sure their money is in the right place at the right time and in the right currency.",
     	"Difficulty level": "hard",
     	"type" : "android"
@@ -29,9 +29,9 @@
 		{"projectid" :3,
   		"details":  {
 
-        "company":"CREATIVE YOLK STUDIOS",
+        "company":"CT",
     	"title" :" Ruby on Rails",
-    	"Image" : "img/after3.png",
+    	"Image" : "img/ct.jpg",
     	"Description" : "Customer relationship management (CRM) is a system for managing a company’s interactions with current and future customers. It often involves using technology to organize, automate, and synchronize sales. Company employee must keep track of current and future customers to synchronize sales. Manually it is not possible for the employee to keep records of all the leads. Customer Relationship Management System helps to keep track of number of leads converted by the employee. This System helps to manage sales. This system is a combination of both .Net and android technology.",
     	"Difficulty level": "hard",
     	"type" : "android"
@@ -41,10 +41,10 @@
 		{"projectid" :4,
   		"details":  {
 
-        "company":"CREATIVE YOLK STUDIOS",
+        "company":"COSMOS",
     	"title" :" RDBMS",
-    	"Image" : "img/hadoop.png",
-    	"Description" : "A local train ticketing system project for local trains that allows users to book local train tickets and get ticket receipt online. This local train project provides login rights for normal users and admin. A normal user may login and get a ticket online, print it and travel by train. The ticketing process consists of a ticket booking form. The form allows the user to choose his source and destination. The source is the station from where the user will be boarding the train. Destination is the station he needs to get down at. The project database is already filled with stations on Mumbai western central and harbor line. It can be modified for any other city as needed. The system also consists of an option to select weather ticket is a single journey or a return ticket and the journey will be commenced on first class or a second class. It also consists of an admin account. The admin may recharge user account balance and check for various journey tickets processed in the system.",
+    	"Image" : "img/cosmos.jpg",
+    	"Description" : "By 2018 European banks will have to give 3rd parties access to their customer data. This new regulation may increase competition, innovation and transparency across the European payments market. The impact will be felt in 2 areas in particular, presenting both opportunities and threats to financial institutions.Aggregators: The majority of people today have multiple bank accounts (i.e. bank with more than one bank). The new regulation will lead to the emergence of aggregators – providing consumers with a portal to view all of their bank details in one place. The aggregator will be able to build valuable insights on consumers offering a number of opportunities (e.g. being able to suggest products and services that most closely meet a consumer’s needs).Payments: When a consumer buys something online, the merchant has to go through intermediaries to receive money from the consumers bank account. The new regulation will bypass this process to allowing merchants to request the payment directly from the consumers bank account if the consumer has given permission. ",
     	"Difficulty level": "hard",
     	"type" : "android"
  	 },
@@ -53,10 +53,10 @@
 		{"projectid" :5,
   		"details":  {
 
-        "company":"CREATIVE YOLK STUDIOS",
+        "company":"GOVERNMENT OF INDIA",
     	"title" :"Local Train Ticketing System",
-    	"Image" :"img/circus.png",
-    	"Description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit blandit metus. Praesent blandit nibh ipsum. Etiam a eros at nunc feugiat rutrum. Morbi in lectus non risus facilisis tincidunt. Nulla quis lobortis ipsum. Quisque at elit orci. Vivamus nec egestas velit, et fermentum dolor. Sed eu elementum nunc. Fusce et accumsan augue, sit amet pellentesque elit. Nam sit amet nulla nisl. Etiam ac purus ultrices nibh gravida auctor. Vestibulum ullamcorper nisl quis pharetra molestie. Duis condimentum tortor in ante porta faucibus a eget odio. Nulla sit amet facilisis magna.",
+    	"Image" :"img/govt.jpg",
+    	"Description" : "A local train ticketing system project for local trains that allows users to book local train tickets and get ticket receipt online. This local train project provides login rights for normal users and admin. A normal user may login and get a ticket online, print it and travel by train. The ticketing process consists of a ticket booking form. The form allows the user to choose his source and destination. The source is the station from where the user will be boarding the train. Destination is the station he needs to get down at. The project database is already filled with stations on Mumbai western central and harbor line. It can be modified for any other city as needed. The system also consists of an option to select weather ticket is a single journey or a return ticket and the journey will be commenced on first class or a second class. It also consists of an admin account. The admin may recharge user account balance and check for various journey tickets processed in the system.",
     	"Difficulty level": "hard",
     	"type" : "android"
  	 },
@@ -65,10 +65,10 @@
 	{"projectid" :6,
   		"details":  {
 
-        "company":"CREATIVE YOLK STUDIOS",
+        "company":"PARRALEX PAYMENTS",
     	"title" :" PARRALEX",
-    	"Image" : "img/submarine.png",
-    	"Description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit blandit metus. Praesent blandit nibh ipsum. Etiam a eros at nunc feugiat rutrum. Morbi in lectus non risus facilisis tincidunt. Nulla quis lobortis ipsum. Quisque at elit orci. Vivamus nec egestas velit, et fermentum dolor. Sed eu elementum nunc. Fusce et accumsan augue, sit amet pellentesque elit. Nam sit amet nulla nisl. Etiam ac purus ultrices nibh gravida auctor. Vestibulum ullamcorper nisl quis pharetra molestie. Duis condimentum tortor in ante porta faucibus a eget odio. Nulla sit amet facilisis magna.",
+    	"Image" : "img/paralled.png",
+    	"Description" : "With the rise of bots, virtual assistants and IoT devices, many believe that the app is evolving to almost extinction. In a world where 70% of the adult population has a smartphone, internet traffic is driven by mobile users and digital consumers interact almost exclusively through social media and messaging services, how will people consume banking services in the future?Organisations are realising the importance of the changing nature of customer behaviour – people are less and less willing to step out of their favourite channels to carry out transactions. For example, when web chatting with an airline company why do you have to revert to their website or app to make a payment? Or when talking to a client on social media, why can’t they view and pay their invoice there and then? ‘Zero UI’ allows users to do what they want, when they want, by allowing them to interact with the devices around them in more natural ways.Zero UI is an emerging trend which reflects a change in consumer behaviour. The majority of face time with apps is now spent using social media, instant messaging or watching videos. Virtual assistants are now embedded into every smartphone device (e.g. Siri, Google Now and Cortana) and over 10% of searches online are initialised through voice requests. Traditional digital platforms such as the retail service Alibaba and message service WeChat now process more payments than PayPal and other dedicated payment services combined.",
     	"Difficulty level": "hard",
     	"type" : "android"
  	 },

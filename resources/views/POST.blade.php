@@ -165,7 +165,7 @@
 
         <md-input-container flex="50">
           <label>Project Type</label>
-          <md-select name="type" ng-model="project.type" required>
+          <md-select name="type" required ng-model="project.type" required>
             <md-option value="Application">Application</md-option>
             <md-option value="Website">Website</md-option>
           </md-select>
