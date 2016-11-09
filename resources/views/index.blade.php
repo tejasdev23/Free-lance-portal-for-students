@@ -127,13 +127,21 @@
                      <li  >
         
         
+@if(Auth::user())
 
+<md-button class="md-raised" style="display:inline-block;height: 10px;"  href="/login"><p style="position:relative;bottom:5px;">ENTER</p></md-button>
+
+<md-button class= "md-accent md-raised md-hue-5" style="display:inline-block;height: 10px;"  href="logout"><p style="position:relative;bottom:5px;">LOGOUT</p></md-button>
+       
+
+@else
         <md-button class= "md-accent md-raised md-hue-5" style="display:inline-block;height: 10px;"  href="/login"><p style="position:relative;bottom:5px;">LOGIN</p></md-button>
        
 
 
         <md-button  class= "md-accent md-raised md-hue-5" style="display:inline-block;height: 10px;" href="/register"><p style="position:relative;bottom:5px;">SIGN UP</p></md-button>
-        
+
+@endif        
         </li>
                         
                        
