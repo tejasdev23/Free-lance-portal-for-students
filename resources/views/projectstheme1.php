@@ -125,7 +125,7 @@ html {
     <!-- Page Content -->
     <div class="container"  ng-controller="projCtrl">
     <div class="row " >
-    <div class="col-xs-6 " ng-repeat="x in projects">
+    <div class="col-xs-12 " ng-repeat="x in projects">
            <md-card >
          <md-card-header>
                 <md-card-header-text md-theme="altTheme">
@@ -133,7 +133,7 @@ html {
                     <span class="md-subhead">{{x.details.title}}</span>
                 </md-card-header-text>
         </md-card-header>
-            <img ng-src={{x.details.Image}} class="md-card-image" >
+            <img ng-src={{x.details.Image}} style="height:400px" class="md-card-image" >
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline"></span>

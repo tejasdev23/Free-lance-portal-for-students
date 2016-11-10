@@ -398,7 +398,10 @@ get connected to the industry by implementing their ideas in the form of project
 <br>
 -To get used with the “BUTTERFLY THEORY”<br>Contact us to know it :p
 <br>
-
+<br>
+<br>
+<br>
+<br>
 <b>For professional contact</b>
 <br>
 
