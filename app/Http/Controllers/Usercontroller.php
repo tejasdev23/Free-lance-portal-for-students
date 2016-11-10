@@ -31,7 +31,6 @@ class Usercontroller extends Controller
 	public function givechallenge()
 	{
 
-
 		return view('givechallenge');	
 	}
 	 public function logout()

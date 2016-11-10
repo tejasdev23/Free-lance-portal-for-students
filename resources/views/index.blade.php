@@ -410,6 +410,9 @@ LinkedIn :
 
 <a href="https://www.linkedin.com/in/tejasnareshpatel23">TEJAS PATEL </a>
 <a href="https://www.linkedin.com/in/guru-rajasekhar-mynampati-610ba3118"> M.G.RAJASEKHAR</a></p>
+<h style="font-size:20px;">Github : </h> 
+<br>
+<a href="https://github.com/tejasdev23/" >https://github.com/tejasdev23/ </a>
         </div>
 
        
