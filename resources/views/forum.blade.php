@@ -208,6 +208,18 @@ $index=0;
 
 </div>
 
+
+            <hr class="featurette-divider"> 
+
+        <!-- Footer -->
+        <footer>
+            <div class="row container">
+                <div class="col-lg-12">
+                    <p style="color:white">Copyright © TP-MGR Productions</p>
+                </div>
+            </div>
+        </footer>
+
 <script>
 
 

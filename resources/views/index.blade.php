@@ -195,7 +195,7 @@
 
     <div class="item">
       <img src="img/cover3.png" alt="parvat">
-      <div class="carousel-content" style="position: absolute;top:460px;left:200px; color: black;"><blockquote><h1 style="color:white ">"What seperates Development from art is that development is meant to be.... _functional_"</h1></blockquote></div>
+      <div class="carousel-content" style="position: absolute;top:220px;left:200px; color: black;"><blockquote><h1 style="color:white ">"What seperates Development from art is that development is meant to be.... _functional_"</h1></blockquote></div>
       </div>
 
     <div class="item">
@@ -248,8 +248,8 @@
                 <span class="text-muted"></span>
             </h2>
             <p>
-            <h3 style="font-family: TimesNewRoman;">
-Hello!, we both are common people(developers) like you people, waiting eagerly for opportunities and
+            <h3 >
+Hello! We both are also developers like you people, waiting eagerly for opportunities and
 wanting  to explore the industry . As we were waiting for opportunities, this idea struck into
 our minds to help people like us. What we believe is internships are not the only way to get
 connected to the companies and get experience about the industries, but getting the habit
@@ -404,11 +404,9 @@ get connected to the industry by implementing their ideas in the form of project
 
 LinkedIn : 
 <br>
-TEJAS PATEL :
-<br> <a href="https://www.linkedin.com/in/tejasnareshpatel23">https://www.linkedin.com/in/tejasnareshpatel23</a>
-<br>
-M.G.Rajasekhar :
-<br><a href="https://www.linkedin.com/in/guru-rajasekhar-mynampati-610ba3118"> https://www.linkedin.com/in/guru-rajasekhar-mynampati-610ba3118</a></p>
+
+<a href="https://www.linkedin.com/in/tejasnareshpatel23">TEJAS PATEL </a>
+<a href="https://www.linkedin.com/in/guru-rajasekhar-mynampati-610ba3118"> M.G.RAJASEKHAR</a></p>
         </div>
 
        
@@ -503,9 +501,9 @@ M.G.Rajasekhar :
         <!-- Footer -->
         
         <footer>
-            <div class="row">
+            <div class="row container">
                 <div class="col-lg-3">
-                    <p>Copyright © TP-MGR Productions</p>
+                    <p  style="color:white; ">Copyright © TP-MGR Productions</p>
                 </div>
             </div>
         </footer>
@@ -513,6 +511,8 @@ M.G.Rajasekhar :
 </div>
 
 </div>
+
+ 
 </body>
     <!-- /.container -->
 <!-- project1 -->
