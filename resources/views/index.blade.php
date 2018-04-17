@@ -243,13 +243,13 @@
    
 
         <div class="featurette" id="aboutus" >
-            <img class="featurette-image img-circle img-responsive pull-right" src="img/god.jpg" style="width:500px;height:500px">
+            <img class="featurette-image img-circle img-responsive pull-right" src="img/god1.jpeg" style="width:500px;height:500px">
             <h2 class="featurette-heading">ABOUT US
                 <span class="text-muted"></span>
             </h2>
             <p >
             <h3  >
-Hello! We both are also developers just like you people, waiting eagerly for opportunities and
+Hello! We three are also developers just like you people, waiting eagerly for opportunities and
 wanting  to explore the industry . As we were waiting for opportunities, this idea struck into
 our minds to help people like us. What we believe is internships are not the only way to get
 connected to the companies and get experience about the industries, but getting the habit
